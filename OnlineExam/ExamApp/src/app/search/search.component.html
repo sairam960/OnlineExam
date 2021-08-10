@@ -1,0 +1,58 @@
+<p>search works!</p>
+
+<div class="csv-file-chooser-section">
+
+  <input type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
+    accept=".csv" />
+
+</div>
+
+<div class="csv-result-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Level</th>
+        <th>Question</th>
+        <th>Option 1</th>
+        <th>Option 2</th>
+        <th>Option 3</th>
+        <th>Option 4</th>
+        <th>Answer</th>
+      </tr>
+    </thead>
+    <tbody style="color: black;">
+      <tr *ngFor="let csvData of csvRecords;let i = index;">
+
+        <td>{{i+1}}</td>
+        <td>
+          <span>{{csvData.level}}</span>
+        </td>
+        <td>
+          <span>{{csvData.question}}</span>
+        </td>
+        <td>
+          <span>{{csvData.op1}}</span>
+        </td>
+        <td>
+          <span>{{csvData.op2}}</span>
+        </td>
+        <td>
+          <span>{{csvData.op3}}</span>
+        </td>
+        <td>
+          <span>{{csvData.op4}}</span>
+        </td>
+        <td>
+            <span>{{csvData.ans}}</span>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+  
+  
