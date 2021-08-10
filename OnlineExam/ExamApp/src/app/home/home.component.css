@@ -1,0 +1,16 @@
+button{
+    width: 15%;
+    padding: 15px;
+    color: honeydew;
+    background-color: cadetblue;
+    text-size-adjust: M;
+}
+
+.container{
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 5;
+    width: 97%;
+    margin: 20px;
+}
