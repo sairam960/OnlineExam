@@ -29,16 +29,4 @@ public class StudentServiceImpl implements StudentService{
 		return false;
 	}
 
-//	@Override
-//	public boolean updateStudent(StudentData student) {
-//		
-//		return false;
-//	}
-//
-//	@Override
-//	public boolean deleteStudent(int studentid) {
-//		// TODO Auto-generated method stub
-//		return false;
-//	}
-
 }
