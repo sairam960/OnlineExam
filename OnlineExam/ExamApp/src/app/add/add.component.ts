@@ -2,11 +2,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgxCsvParser, NgxCSVParserError } from 'ngx-csv-parser';
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  selector: 'app-add',
+  templateUrl: './add.component.html',
+  styleUrls: ['./add.component.css']
 })
-export class SearchComponent implements OnInit {
+export class AddComponent implements OnInit {
 
   csvRecords: any[] = [];
   header: boolean = true;
@@ -32,6 +32,5 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
 
 }
