@@ -14,7 +14,7 @@ import { NextLevelComponent } from './next-level/next-level.component';
 import { NotClearComponent } from './not-clear/not-clear.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
-
+import { HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
     BrowserModule,
     AppRoutingModule,
     NgxCsvParserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
