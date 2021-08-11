@@ -1,3 +1,17 @@
+
+div{
+    text-align: center;
+    font-size: large;
+}
+
+button{
+    width: 10%;
+    padding: 10px;
+    color: honeydew;
+    background-color: cadetblue;
+    
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -19,11 +33,3 @@ li a {
 li a:hover {
     background-color: #111;
   }
-  
-  .body{
-    padding: 330px;
-    background-image: url('/assets/exam.jpg'); 
-    height: 100%;
-    background-position: center;
-    background-size:cover; 
- }

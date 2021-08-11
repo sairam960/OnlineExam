@@ -1,43 +1,10 @@
-#header {
-    margin: auto;
-    text-align: center;
-    font-size: larger;
-    color: black;
-    background-color: cyan;
-    padding: 30px;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    overflow: hidden;
-    background-color: grey;
-  }
-
-  li {
-    float: left; 
-  }
-
-  li a {
-    text-decoration: none;
-    padding: 15px ;
-    color: honeydew;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
-  
-  #footer {
+#footer {
     text-align: center;
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 97%;
-    margin: 20px;
-  }
-  
-  #main {
-      margin: 10px;
+    width: 99%;
+    /* margin: 20px; */
+    padding: 10px;
+    background-color: grey;
   }
