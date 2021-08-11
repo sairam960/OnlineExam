@@ -13,8 +13,7 @@ public class StudentData {
 	
 	@Id
 	@Column(name="studentid")
-	
-	private int studentId;
+	private int studentid;
 	
 	@Column(name="name")
 	private String name;
@@ -47,9 +46,9 @@ public class StudentData {
 		super();
 	}
 	public StudentData(int studentId, String name, String email, String password, long mobile, LocalDate dateOfBirth,
-			String city, String state, String qualification, LocalDate yearOfCompletion) {
+			String city, String state, String qualification, LocalDate yearOfCompletion, int studentid) {
 		super();
-		this.studentId = studentId;
+		this.studentid = studentid;
 		this.name = name;
 		this.email = email;
 		this.password = password;
@@ -60,11 +59,11 @@ public class StudentData {
 		this.qualification = qualification;
 		this.yearOfCompletion = yearOfCompletion;
 	}
-	public int getStudentId() {
-		return studentId;
+	public int getStudentid() {
+		return studentid;
 	}
-	public void setStudentId(int studentId) {
-		this.studentId = studentId;
+	public void setStudentid(int studentid) {
+		this.studentid = studentid;
 	}
 	public String getName() {
 		return name;

@@ -1,0 +1,44 @@
+package com.lti.service;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lti.model.StudentData;
+import com.lti.repository.StudentRepository;
+
+@Service
+@Transactional
+public class StudentServiceImpl implements StudentService{
+	
+	@Autowired
+	StudentRepository studRepo;
+	
+	@Override
+	public List<StudentData> getStudents() {
+		
+		return null;
+	}
+
+	@Override
+	public boolean addStudent(StudentData student) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateStudent(StudentData student) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteStudent(int studentid) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
