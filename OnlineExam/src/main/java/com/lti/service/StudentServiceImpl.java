@@ -19,14 +19,13 @@ public class StudentServiceImpl implements StudentService{
 	
 	@Override
 	public List<StudentData> getStudents() {
-		studRepo.findAll();
-		return null;
+		return studRepo.findAll();
 	}
 
 	@Override
 	public boolean addStudent(StudentData student) {
 		studRepo.save(student);
-		return false;
+		return true;
 	}
 
 }

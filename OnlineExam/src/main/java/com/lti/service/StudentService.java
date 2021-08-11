@@ -10,5 +10,4 @@ public interface StudentService {
 	
 	public boolean addStudent(StudentData student);
 	
-
 }
