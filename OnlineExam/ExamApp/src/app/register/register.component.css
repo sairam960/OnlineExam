@@ -1,12 +1,35 @@
-div{
+/* div .table{
     border: black;
     border: solid;
     border-style: groove;  
-}
+} */
 
 input {
     width: 100%;
     padding: 5px 15px;
     margin: 8px 0;
     box-sizing: border-box;
+  }
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: grey;
+  }
+
+li {
+    float: right; 
+  }
+
+li a {
+    text-decoration: none;
+    padding: 20px ;
+    color: honeydew;
+  }
+  
+li a:hover {
+    background-color: #111;
   }
