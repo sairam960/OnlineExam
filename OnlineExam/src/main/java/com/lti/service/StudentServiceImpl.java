@@ -19,7 +19,7 @@ public class StudentServiceImpl implements StudentService{
 	
 	@Override
 	public List<StudentData> getStudents() {
-		
+		studRepo.findAll();
 		return null;
 	}
 
