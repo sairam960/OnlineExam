@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { SearchComponent } from './search/search.component';
 import { InstructionComponent } from './instruction/instruction.component';
 import { ExampageComponent } from './exampage/exampage.component';
+import { AddComponent } from './add/add.component';
 const routes: Routes = [
   {
     path: 'homeLink', component: HomeComponent
@@ -17,7 +17,7 @@ const routes: Routes = [
     path: 'registerLink', component: RegisterComponent
   },
   {
-    path: 'search', component:SearchComponent
+    path: 'addComponent', component:AddComponent
   },
   {path:'JavaTest',component:InstructionComponent},
   {path:'DBMSTest',component:InstructionComponent},
