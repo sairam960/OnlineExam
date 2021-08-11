@@ -10,6 +10,8 @@ import { ReportComponent } from './report/report.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
+import { ExampageComponent } from './exampage/exampage.component';
+import { InstructionComponent } from './instruction/instruction.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SearchComponent } from './search/search.component';
     ReportComponent,
     LoginComponent,
     RegisterComponent,
-    SearchComponent
+    SearchComponent,
+    ExampageComponent,
+    InstructionComponent
 
   ],
   imports: [
