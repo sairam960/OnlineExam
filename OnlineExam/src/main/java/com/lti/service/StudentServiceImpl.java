@@ -25,20 +25,20 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public boolean addStudent(StudentData student) {
-		// TODO Auto-generated method stub
+		studRepo.save(student);
 		return false;
 	}
 
-	@Override
-	public boolean updateStudent(StudentData student) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean deleteStudent(int studentid) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+//	@Override
+//	public boolean updateStudent(StudentData student) {
+//		
+//		return false;
+//	}
+//
+//	@Override
+//	public boolean deleteStudent(int studentid) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
 
 }

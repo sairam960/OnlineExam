@@ -10,8 +10,8 @@ public interface StudentService {
 	
 	public boolean addStudent(StudentData student);
 	
-	public boolean updateStudent(StudentData student);
-	
-	public boolean deleteStudent(int studentid);
+//	public boolean updateStudent(StudentData student);
+//	
+//	public boolean deleteStudent(int studentid);
 	 
 }
