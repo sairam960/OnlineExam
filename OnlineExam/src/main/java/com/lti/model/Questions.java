@@ -2,6 +2,13 @@ package com.lti.model;
 
 public class Questions {
 	private int quesid;
+	private int subjectId;
+	public int getSubjectId() {
+		return subjectId;
+	}
+	public void setSubjectId(int subjectId) {
+		this.subjectId = subjectId;
+	}
 	private int level;
 	private String question;
 	private String op1;
@@ -13,7 +20,7 @@ public class Questions {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Questions(int quesid, int level, String question, String op1, String op2, String op3, String op4,
+	public Questions(int quesid,int subjectId, int level, String question, String op1, String op2, String op3, String op4,
 			String ans) {
 		super();
 		this.quesid = quesid;
