@@ -12,6 +12,8 @@ import { RegisterComponent } from './register/register.component';
 import { ExampageComponent } from './exampage/exampage.component';
 import { InstructionComponent } from './instruction/instruction.component';
 import { AddComponent } from './add/add.component';
+import { NextLevelComponent } from './next-level/next-level.component';
+import { NotClearComponent } from './not-clear/not-clear.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AddComponent } from './add/add.component';
     RegisterComponent,
     ExampageComponent,
     InstructionComponent,
-    AddComponent
+    AddComponent,
+    NextLevelComponent,
+    NotClearComponent
 
   ],
   imports: [
