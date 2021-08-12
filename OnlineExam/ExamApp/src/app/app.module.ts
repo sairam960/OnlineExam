@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { ExampageComponent } from './exampage/exampage.component';
 import { InstructionComponent } from './instruction/instruction.component';
 import { AddComponent } from './add/add.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddComponent } from './add/add.component';
     RegisterComponent,
     ExampageComponent,
     InstructionComponent,
-    AddComponent
+    AddComponent,
+    SearchComponent
 
   ],
   imports: [

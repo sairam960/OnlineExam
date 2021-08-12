@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { InstructionComponent } from './instruction/instruction.component';
 import { ExampageComponent } from './exampage/exampage.component';
 import { AddComponent } from './add/add.component';
+import { SearchComponent } from './search/search.component';
 const routes: Routes = [
   {
     path: 'homeLink', component: HomeComponent
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'DBMSTest',component:InstructionComponent},
   {path:'PythonTest',component:InstructionComponent},
   {path:'AngularTest',component:InstructionComponent},
-  {path:'ExamPage',component:ExampageComponent}
+  {path:'ExamPage',component:ExampageComponent},
+  {path:'Search', component:SearchComponent}
 ];
 
 @NgModule({
