@@ -11,11 +11,11 @@ import { ExampageComponent } from './exampage/exampage.component';
 import { InstructionComponent } from './instruction/instruction.component';
 import { AddComponent } from './add/add.component';
 import { SearchComponent } from './search/search.component';
-import { NextLevelComponent } from './next-level/next-level.component';
-import { NotClearComponent } from './not-clear/not-clear.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { HttpClientModule} from '@angular/common/http';
+import { NotClearComponent } from './not-clear/not-clear.component';
+import { NextLevelComponent } from './next-level/next-level.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +27,10 @@ import { HttpClientModule} from '@angular/common/http';
     InstructionComponent,
     AddComponent,
     SearchComponent,
-    NextLevelComponent,
-    NotClearComponent,
     StudentLoginComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    NotClearComponent,
+    NextLevelComponent
 
   ],
   imports: [

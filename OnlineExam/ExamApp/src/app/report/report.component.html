@@ -2,7 +2,9 @@
     <head>
         <title>OnlineExamApp</title>
         <Style>
-            body{background-image: url("Reportbackground.jpeg");}
+            body{background-image: url("/assets/Reportbackground.jpeg");
+            background-size: cover;
+        }
             form{text-align: center;}
             form{font-family:'Times New Roman', Times, serif}
             form{font-size: xx-large;}
@@ -27,7 +29,7 @@
             Level:<br>
             Subject:<br>
             
-           <br> <button type="button" class="button">Exit</button>
+           <br> <button type="button" (click)="goto()" class="button">Exit</button>
         </div>
         </form>
         </h1>

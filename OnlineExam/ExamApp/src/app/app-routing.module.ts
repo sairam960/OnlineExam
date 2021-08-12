@@ -8,6 +8,9 @@ import { AddComponent } from './add/add.component';
 import { SearchComponent } from './search/search.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { NotClearComponent } from './not-clear/not-clear.component';
+import { NextLevelComponent } from './next-level/next-level.component';
+import { ReportComponent } from './report/report.component';
 const routes: Routes = [
   {
     path: '', component: HomeComponent
@@ -26,6 +29,16 @@ const routes: Routes = [
   },
   {
     path: 'addComponent', component:AddComponent
+  },
+
+  {
+    path: 'notclear',component:NotClearComponent
+  },
+  {
+    path:'nextlevel',component:NextLevelComponent
+  },
+  {
+    path:'report',component:ReportComponent
   },
   {path:'JavaTest',component:InstructionComponent},
   {path:'DBMSTest',component:InstructionComponent},
