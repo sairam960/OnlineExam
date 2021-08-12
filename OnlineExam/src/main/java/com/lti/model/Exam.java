@@ -26,64 +26,80 @@ public class Exam {
 	@Column(name="lvl")
 	private int lvl;
 	
-	@Column(name="start")
-	private LocalDate start;
+	@Column(name="starttime")
+	private LocalDate starttime;
 	
-	@Column(name="end")
-	private LocalDate end;
+	@Column(name="endtime")
+	private LocalDate endtime;
 	
 	@Column(name="status")
 	private boolean status;
-	
+
 	public int getExamId() {
 		return examId;
 	}
+
 	public void setExamId(int examId) {
 		this.examId = examId;
 	}
+
 	public int getStudentId() {
 		return studentId;
 	}
+
 	public void setStudentId(int studentId) {
 		this.studentId = studentId;
 	}
+
 	public int getSubjectId() {
 		return subjectId;
 	}
+
 	public void setSubjectId(int subjectId) {
 		this.subjectId = subjectId;
 	}
+
 	public int getScore() {
 		return score;
 	}
+
 	public void setScore(int score) {
 		this.score = score;
 	}
-	public int getlvl() {
+
+	public int getLvl() {
 		return lvl;
 	}
-	public void setlvl(int lvl) {
+
+	public void setLvl(int lvl) {
 		this.lvl = lvl;
 	}
-	public LocalDate getStart() {
-		return start;
+
+	public LocalDate getStarttime() {
+		return starttime;
 	}
-	public void setStart(LocalDate start) {
-		this.start = start;
+
+	public void setStarttime(LocalDate starttime) {
+		this.starttime = starttime;
 	}
-	public LocalDate getEnd() {
-		return end;
+
+	public LocalDate getEndtime() {
+		return endtime;
 	}
-	public void setEnd(LocalDate end) {
-		this.end = end;
+
+	public void setEndtime(LocalDate endtime) {
+		this.endtime = endtime;
 	}
+
 	public boolean isStatus() {
 		return status;
 	}
+
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-	public Exam(int examId, int studentId, int subjectId, int score, int lvl, LocalDate start, LocalDate end,
+
+	public Exam(int examId, int studentId, int subjectId, int score, int lvl, LocalDate starttime, LocalDate endtime,
 			boolean status) {
 		super();
 		this.examId = examId;
@@ -91,13 +107,18 @@ public class Exam {
 		this.subjectId = subjectId;
 		this.score = score;
 		this.lvl = lvl;
-		this.start = start;
-		this.end = end;
+		this.starttime = starttime;
+		this.endtime = endtime;
 		this.status = status;
 	}
+
 	public Exam() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
 	
 
 }
