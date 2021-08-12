@@ -21,7 +21,7 @@ export class AdminLoginComponent implements OnInit {
       sessionStorage.setItem("uname", this.userName);
 
     }else{
-    this.router.navigate(['/loginLink']);
+    this.router.navigate(['/admin-loginLink']);
     }
   }
 }
