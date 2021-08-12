@@ -2,15 +2,39 @@ package com.lti.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="exam_data")
 public class Exam {
+	@Id
+	@Column(name="examId")
 	private int examId;
+	
+	@Column(name="studentId")
 	private int studentId;
+	
+	@Column(name="subjectId")
 	private int subjectId;
+	
+	@Column(name="score")
 	private int score;
+	
+	@Column(name="level")
 	private int level;
+	
+	@Column(name="start")
 	private LocalDate start;
+	
+	@Column(name="end")
 	private LocalDate end;
+	
+	@Column(name="status")
 	private boolean status;
+	
 	public int getExamId() {
 		return examId;
 	}
