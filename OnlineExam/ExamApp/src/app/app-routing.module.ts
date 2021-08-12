@@ -5,15 +5,13 @@ import { RegisterComponent } from './register/register.component';
 import { InstructionComponent } from './instruction/instruction.component';
 import { ExampageComponent } from './exampage/exampage.component';
 import { AddComponent } from './add/add.component';
+import { QuestionsComponent } from './questions/questions.component';
 import { SearchComponent } from './search/search.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
-<<<<<<< HEAD
 
 import { NotClearComponent } from './not-clear/not-clear.component';
 import { NextLevelComponent } from './next-level/next-level.component';
-=======
->>>>>>> parent of db712dc (Merge branch 'main' of https://github.com/sairam960/OnlineExam into main)
 const routes: Routes = [
   {
     path: '', component:HomeComponent
@@ -44,7 +42,6 @@ const routes: Routes = [
   {path:'PythonTest',component:InstructionComponent},
   {path:'AngularTest',component:InstructionComponent},
   {path:'ExamPage',component:ExampageComponent},
-<<<<<<< HEAD
 <<<<<<< Updated upstream
   {path:'searchLink', component:SearchComponent},
   {path:'TakeTest',component:QuestionsComponent},
@@ -52,9 +49,6 @@ const routes: Routes = [
   {path:'questionsLink',component:QuestionsComponent},
 >>>>>>> Stashed changes
   {path:'Search', component:SearchComponent}
-=======
-  {path:'searchLink', component:SearchComponent}
->>>>>>> parent of db712dc (Merge branch 'main' of https://github.com/sairam960/OnlineExam into main)
 ];
 
 @NgModule({

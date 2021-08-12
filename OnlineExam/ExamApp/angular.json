@@ -32,13 +32,9 @@
             "styles": [
               "src/styles.css"
             ],
-<<<<<<< HEAD
             "scripts": [
               "src/assets/js/ques.js"
             ]
-=======
-            "scripts": []
->>>>>>> parent of db712dc (Merge branch 'main' of https://github.com/sairam960/OnlineExam into main)
           },
           "configurations": {
             "production": {
