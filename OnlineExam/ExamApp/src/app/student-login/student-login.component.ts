@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-login',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentLoginComponent implements OnInit {
 
-  constructor() { }
+  email:string;
+  password:string;
+
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  checkStudent(){
+    
+  }
 }
