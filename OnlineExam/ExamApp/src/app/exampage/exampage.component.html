@@ -1,10 +1,31 @@
-<div class="log"> <button>LogOut</button> </div>
-<h1> Welcome to The Test Page</h1>
+<html>
+  <head>
+    <style>
+      body{background-color: darkcyan;}
+      .boxed{align-items: center;}
+            
+            .boxed{background-color: rgb(248, 249, 250);}
+            .boxed{width: 30%;
+  border: 15px solid #fcfdfd;
+  padding: 50px;
+  margin: 20px;
+opacity: 0.3;}
+  .button{font-size: 40%;
+  margin: 4px 100px;}
+
+  pre{text-align: center;color: rgb(47, 54, 54);}
+    </style>
+  </head>
+</html><body>
+  <div class="log"> <button>Home</button> </div>
+<h1> Welcome to the Test Page</h1><br><br>
+<h3><pre>Select Your Subject</pre></h3><br><br><br><br><br>
 <div>
-  <a routerLink="JavaTest">Java</a><br>
-  <a routerLink="DBMSTest">DBMS</a><br>
-  <a routerLink="PythonTest">Python</a><br>
-  <a routerLink="AngularTest">Angular</a><br>
+    <span class="boxed"><a routerLink="/JavaTest">Java</a><br></span> <br><br><br><br><br><br><br><br><br>
+    <span class="boxed"><a routerLink="/DBMSTest">DBMS</a><br></span><br><br><br><br><br><br><br><br><br>
+    <span class="boxed"><a routerLink="/PythonTest">Python</a><br></span><br><br><br><br><br><br><br><br><br>
+    <span class="boxed"><a routerLink="/AngularTest">Angular</a><br></span>
 
 </div>
+</body>
 <router-outlet></router-outlet>
