@@ -13,11 +13,13 @@ import { AddComponent } from './add/add.component';
 import { SearchComponent } from './search/search.component';
 import { NextLevelComponent } from './next-level/next-level.component';
 import { NotClearComponent } from './not-clear/not-clear.component';
+<<<<<<< HEAD
 import { QuestionsComponent } from './questions/questions.component';
+=======
+>>>>>>> parent of db712dc (Merge branch 'main' of https://github.com/sairam960/OnlineExam into main)
 import { StudentLoginComponent } from './student-login/student-login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { HttpClientModule} from '@angular/common/http';
-
 
 @NgModule({
   declarations: [
@@ -31,12 +33,8 @@ import { HttpClientModule} from '@angular/common/http';
     SearchComponent,
     NextLevelComponent,
     NotClearComponent,
-
-    QuestionsComponent,
-
     StudentLoginComponent,
     AdminLoginComponent
-
 
   ],
   imports: [
