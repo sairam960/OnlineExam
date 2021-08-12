@@ -83,7 +83,7 @@ public class Exam {
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-	public Exam(int examId, int studentId, int subjectId, int score, int level, LocalDate start, LocalDate end,
+	public Exam(int examId, int studentId, int subjectId, int score, int lvl, LocalDate start, LocalDate end,
 			boolean status) {
 		super();
 		this.examId = examId;
