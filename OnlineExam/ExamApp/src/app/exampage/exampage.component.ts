@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-exampage',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExampageComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private route:Router) { }
+  gotohome()
+  {
+    this.route.navigate(['/homeLink'])
+  }
   ngOnInit(): void {
   }
 

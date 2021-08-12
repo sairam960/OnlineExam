@@ -17,6 +17,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { NotClearComponent } from './not-clear/not-clear.component';
 import { NextLevelComponent } from './next-level/next-level.component';
 import { AdminquesComponent } from './adminques/adminques.component';
+import { StudentdashboardComponent } from './studentdashboard/studentdashboard.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AdminquesComponent } from './adminques/adminques.component';
     AdminLoginComponent,
     NotClearComponent,
     NextLevelComponent,
-    AdminquesComponent
+    AdminquesComponent,
+    StudentdashboardComponent
 
   ],
   imports: [

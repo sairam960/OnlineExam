@@ -12,6 +12,7 @@ import { NotClearComponent } from './not-clear/not-clear.component';
 import { NextLevelComponent } from './next-level/next-level.component';
 import { ReportComponent } from './report/report.component';
 import { AdminquesComponent } from './adminques/adminques.component';
+import { StudentdashboardComponent } from './studentdashboard/studentdashboard.component';
 const routes: Routes = [
   {
     path: '', component: HomeComponent
@@ -47,7 +48,8 @@ const routes: Routes = [
   {path:'AngularTest',component:InstructionComponent},
   {path:'ExamPage',component:ExampageComponent},
   {path:'searchLink', component:SearchComponent},
-  {path:'adminques',component:AdminquesComponent}
+  {path:'adminques',component:AdminquesComponent},
+  {path:'studentdashboard',component:StudentdashboardComponent}
 ];
 
 @NgModule({
