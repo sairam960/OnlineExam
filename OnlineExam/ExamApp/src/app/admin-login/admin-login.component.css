@@ -1,34 +1,35 @@
 .body{
-    text-align: center;
-    font-size: large;
+  text-align: center;
+  font-size: large;
 }
 
 button{
-    width: 10%;
-    padding: 10px;
-    color: honeydew;
-    background-color: cadetblue;
-    
+  width: 10%;
+  padding: 10px;
+  color: honeydew;
+  background-color: cadetblue;
+  
 }
 
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    overflow: hidden;
-    background-color: grey;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: grey;
+}
 
 li {
-    float: right; 
-  }
+  float: right; 
+}
 
 li a {
-    text-decoration: none;
-    padding: 20px ;
-    color: honeydew;
-  }
-  
+  text-decoration: none;
+  padding: 20px ;
+  color: honeydew;
+}
+
 li a:hover {
-    background-color: #111;
-  }
+  background-color: #111;
+}
