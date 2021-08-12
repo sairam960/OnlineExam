@@ -15,6 +15,7 @@ import { AdminquesComponent } from './adminques/adminques.component';
 import { StudentdashboardComponent } from './studentdashboard/studentdashboard.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { AboutUsComponent} from'./about-us/about-us.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   {
@@ -51,7 +52,8 @@ const routes: Routes = [
   {path:'adminques',component:AdminquesComponent},
   {path:'studentdashboard',component:StudentdashboardComponent},
   {path:'questions',component:QuestionsComponent},
-  {path:'aboutusLink',component:AboutUsComponent}
+  {path:'aboutusLink',component:AboutUsComponent},
+  {path:'**', component:ErrorComponent}
 
 ];
 

@@ -20,6 +20,7 @@ import { AdminquesComponent } from './adminques/adminques.component';
 import { StudentdashboardComponent } from './studentdashboard/studentdashboard.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     AdminquesComponent,
     StudentdashboardComponent,
     QuestionsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ErrorComponent
 
   ],
   imports: [
