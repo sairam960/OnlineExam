@@ -7,7 +7,16 @@ import { NgxCsvParser, NgxCSVParserError } from 'ngx-csv-parser';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-
+  SubjectName:string='';
+  level:number=0;
+  selectChangeHandler(event:any)
+  {
+    this.SubjectName=event.target.value;
+  }
+  selectChangesHandler(event:any)
+  {
+    this.level=event.target.value;
+  }
   csvRecords: any[] = [];
   header: boolean = true;
 

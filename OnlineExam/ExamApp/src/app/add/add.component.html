@@ -2,23 +2,27 @@
 <h1>ADD Questions</h1>
 <label for="SubjectName">Choose a Subject</label>
 <br>
-<select id="SubjectName">
+<select (change)="selectChangeHandler($event)"id="SubjectName">
   <option value="Angular">Angular</option>
   <option value="DBMS">DBMS</option>
   <option value="Java">Java</option>
   <option value="Python">Python</option>
 </select>
+
 <br>
+<br>
+
 <br>
 <label for="level">Choose a Level</label>
 <br>
-<select id="level">
+<select (change)="selectChangesHandler($event)" id="level">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
   </select>
   <br>
   <br>
+ 
 <div class="csv-file-chooser-section">
 
   <input type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
