@@ -14,55 +14,92 @@
     <form #regform="ngForm" (ngSubmit)="savedata()">
 
         <table>
-
+            
             <tr>
                 <td><label for="name">Full Name</label></td>
-                <td><input type="text" name="name" [(ngModel)]="stud.name" required></td>
+                <td><input type="text" name="name" #un="ngModel" [(ngModel)]="stud.name" required></td>
             </tr>
+            <div *ngIf="un.invalid && (un.dirty||un.touched)" style="color: red;" >
+                <div *ngIf="un.errors?.required">*Name is required</div>
+            </div>
+
             <tr>
                 <td><label for="email">Email ID</label></td>
-                <td><input type="email" name="email" [(ngModel)]="stud.email" required></td>
+                <td><input type="email" name="email" #ue="ngModel" [(ngModel)]="stud.email" required pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,4}$"></td>
             </tr>
+            <div *ngIf="ue.invalid && (ue.dirty||ue.touched)" style="color: red;" >
+                <div *ngIf="ue.errors?.required">*Email is required</div>
+                <div *ngIf="ue.errors?.pattern">*Email ID is invalid</div>
+            </div>
+
             <tr>
                 <td><label for="password">Password</label></td>
-                <td><input type="password" name="password" [(ngModel)]="stud.password" required></td>
+                <td><input type="password" name="password" [(ngModel)]="stud.password" #up="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"></td>
             </tr>
+            <div *ngIf="up.invalid && (up.dirty||up.touched)" style="color: red;" >
+                <div *ngIf="up.errors?.required">*Password is required</div>
+                <div *ngIf="up.errors?.pattern">*Password must be of Strong</div>
+            </div>
+
             <tr>
                 <td><label for="mobile">Mobile No.</label></td>
-                <td><input type="tel" name="mobile" [(ngModel)]="stud.mobile" required></td>
+                <td><input type="tel" name="mobile" [(ngModel)]="stud.mobile" #um="ngModel" required pattern="^[6-9]\d{9}$"></td>
             </tr>
+            <div *ngIf="um.invalid && (um.dirty||um.touched)" style="color: red;" >
+                <div *ngIf="um.errors?.required">*Phone number is required</div>
+                <div *ngIf="um.errors?.pattern">*Phone number must have 10 digits</div>
+            </div>
+
             <tr>
                 <td><label for="city">City</label></td>
-                <td><input type="text" name="city" [(ngModel)]="stud.city" required></td>
+                <td><input type="text" #uc="ngModel" name="city" [(ngModel)]="stud.city" required></td>
             </tr>
+            <div *ngIf="uc.invalid && (uc.dirty||uc.touched)" style="color: red;" >
+                <div *ngIf="uc.errors?.required">*City name is required</div>
+            </div>
+
             <tr>
                 <td><label for="state">State</label></td>
-                <td><input type="text" name="state" [(ngModel)]="stud.state" required></td>
+                <td><input type="text" #us="ngModel" name="state" [(ngModel)]="stud.state" required></td>
             </tr>
+            <div *ngIf="us.invalid && (us.dirty||us.touched)" style="color: red;" >
+                <div *ngIf="us.errors?.required">*State name is required</div>
+            </div>
+
             <tr>
                 <td><label for="dob">Date of Birth</label></td>
-                <td><input type="date" name="dob" [(ngModel)]="stud.dob" required></td>
+                <td><input type="date" #ud="ngModel" name="dob" [(ngModel)]="stud.dob" required></td>
             </tr>
+            <div *ngIf="ud.invalid && (ud.dirty||ud.touched)" style="color: red;" >
+                <div *ngIf="ud.errors?.required">*Date of Birth is required</div>
+            </div>
+
             <tr>
                 <td><label for="qualification">Qualification</label></td>
-                <td><input type="text" name="qualification" [(ngModel)]="stud.qualification" required></td>
+                <td><input type="text" #uq="ngModel" name="qualification" [(ngModel)]="stud.qualification" required></td>
             </tr>
+            <div *ngIf="uq.invalid && (uq.dirty||uq.touched)" style="color: red;" >
+                <div *ngIf="uq.errors?.required">*Qualification is required</div>
+            </div>
+
             <tr>
                 <td><label for="yearofcompletion">Year of Completion</label></td>
-                <td><input type="date" name="yearofcompletion" [(ngModel)]="stud.yearofcompletion" required></td>
+                <td><input type="date" #uy="ngModel" name="yearofcompletion" [(ngModel)]="stud.yearofcompletion" required></td>
             </tr>
+            <div *ngIf="uy.invalid && (uy.dirty||uy.touched)" style="color: red;" >
+                <div *ngIf="uy.errors?.required">*Year of degree completion is required</div>
+            </div>
             <br>
             <!-- <tr>
                 <td><input type="submit" value="Save Student" [disabled]="!regform.valid"></td>
             </tr> -->
         </table>
-        
+
             <div id="but"><input type="submit" value="Save Student" [disabled]="!regform.valid"></div>
             <div> <br> </div>
 
     </form> 
 
 </div>
-
 
 </div>
