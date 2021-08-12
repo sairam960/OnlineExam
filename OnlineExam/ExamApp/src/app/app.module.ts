@@ -14,6 +14,7 @@ import { InstructionComponent } from './instruction/instruction.component';
 import { AddComponent } from './add/add.component';
 import { NextLevelComponent } from './next-level/next-level.component';
 import { NotClearComponent } from './not-clear/not-clear.component';
+import { QuestionsComponent } from './questions/questions.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NotClearComponent } from './not-clear/not-clear.component';
     InstructionComponent,
     AddComponent,
     NextLevelComponent,
-    NotClearComponent
+    NotClearComponent,
+    QuestionsComponent
 
   ],
   imports: [
