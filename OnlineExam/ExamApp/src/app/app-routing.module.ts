@@ -45,10 +45,7 @@ const routes: Routes = [
   {
     path:'report',component:ReportComponent
   },
-  {path:'JavaTest',component:InstructionComponent},
-  {path:'DBMSTest',component:InstructionComponent},
-  {path:'PythonTest',component:InstructionComponent},
-  {path:'AngularTest',component:InstructionComponent},
+  {path:'instruction/:id',component:InstructionComponent},
   {path:'ExamPage',component:ExampageComponent},
   {path:'searchLink', component:SearchComponent},
   {path:'adminques',component:AdminquesComponent},

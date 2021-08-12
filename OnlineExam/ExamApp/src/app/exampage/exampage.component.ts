@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router,ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-exampage',
@@ -8,12 +8,19 @@ import { Router } from '@angular/router';
 })
 export class ExampageComponent implements OnInit {
 
-  constructor(private route:Router) { }
+
+  constructor(private router:Router, private route:ActivatedRoute) { }
   gotohome()
   {
-    this.route.navigate(['/homeLink'])
+    this.router.navigate(['/homeLink'])
   }
   ngOnInit(): void {
+  }
+
+  submitsub(subject:String)
+  {
+    this.router.navigate(['instruction',subject]);
+    console.log(subject);
   }
 
 }
