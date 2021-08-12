@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
-
-
 
 @Component({
   selector: 'app-not-clear',
@@ -9,20 +6,10 @@ import { Router} from '@angular/router';
   styleUrls: ['./not-clear.component.css']
 })
 export class NotClearComponent implements OnInit {
-  
 
-  
-  constructor(private router:Router) {
-
-   }
- 
+  constructor() { }
 
   ngOnInit(): void {
-  }
- 
-  GoToHome()
-  {
-    this.router.navigate(['/homeLink']);
   }
 
 }

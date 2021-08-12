@@ -21,10 +21,3 @@ h1
 	text-align:center;
     color:cornflowerblue;
 }
-body
-{
-	
-	background-image: url('/assets/exampage.jpg');
-	background-position: center;
-    background-size:cover; 
-}

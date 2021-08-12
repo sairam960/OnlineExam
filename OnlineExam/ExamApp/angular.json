@@ -33,7 +33,10 @@
               "src/styles.css"
             ],
             "scripts": [
+              
+              "src/assets/js/jsondata.js",
               "src/assets/js/ques.js"
+
             ]
           },
           "configurations": {
