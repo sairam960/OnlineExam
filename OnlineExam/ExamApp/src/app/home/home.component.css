@@ -1,16 +1,29 @@
-button{
-    width: 15%;
-    padding: 15px;
-    color: honeydew;
-    background-color: cadetblue;
-    text-size-adjust: M;
-}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: grey;
+  }
 
-.container{
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 5;
-    width: 97%;
-    margin: 20px;
-}
+li {
+    float: right; 
+  }
+
+li a {
+    text-decoration: none;
+    padding: 20px ;
+    color: honeydew;
+  }
+  
+li a:hover {
+    background-color: #111;
+  }
+  
+  .body{
+    padding: 330px;
+    background-image: url('/assets/exam.jpg'); 
+    height: 100%;
+    background-position: center;
+    background-size:cover; 
+ }

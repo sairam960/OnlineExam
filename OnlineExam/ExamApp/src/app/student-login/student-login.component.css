@@ -1,18 +1,18 @@
-/* div .table{
-    border: black;
-    border: solid;
-    border-style: groove;  
-} */
 
-input {
-    width: 100%;
-    padding: 5px 15px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
+.body{
+    text-align: center;
+    font-size: large;
+}
 
+button{
+    width: 10%;
+    padding: 10px;
+    color: honeydew;
+    background-color: cadetblue;
+    
+}
 
-  ul {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 10px;

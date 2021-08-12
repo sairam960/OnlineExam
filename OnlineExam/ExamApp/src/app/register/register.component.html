@@ -1,43 +1,57 @@
+<div id="nav">
+    <ul>
+        <li><a routerLink="/aboutusLink">About Us</a></li>
+        <li><a routerLink="/admin-loginLink">Admin Login</a></li>
+        <li><a routerLink="/student-loginLink">Student Login</a></li>
+        <li><a routerLink="/homeLink">Home</a></li>
+    </ul>
+  </div>
+<br><br><br><br>
 
-<div>
-    <!-- <form #studentdata="ngForm"></form> -->
+<div class="table">
 
-    <table>
-        <tr>
-            <td><label for="name">Full Name</label></td>
-            <td><input type="text" name="name"></td>
-        </tr>
-        <tr>
-            <td><label for="email">Email ID</label></td>
-            <td><input type="email" name="email"></td>
-        </tr>
-        <tr>
-            <td><label for="mobile">Mobile No.</label></td>
-            <td><input type="tel" name="mobile"></td>
-        </tr>
-        <tr>
-            <td><label for="city">City</label></td>
-            <td><input type="text" name="city"></td>
-        </tr>
-        <tr>
-            <td><label for="state">State</label></td>
-            <td><input type="text" name="state"></td>
-        </tr>
-        <tr>
-            <td><label for="DOB">Date of Birth</label></td>
-            <td><input type="date" name="DOB"></td>
-        </tr>
-        <tr>
-            <td><label for="qualification">Qualification</label></td>
-            <td><input type="text" name="qualification"></td>
-        </tr>
-        <tr>
-            <td><label for="yearofcompletion">Year of Completion</label></td>
-            <td><input type="date" name="yearOfCompletion"></td>
-        </tr>
-        <tr>
-            <td><input type="submit" name="Register Student"></td>
-        </tr>
-    </table>
+    <form #regform="ngForm" (ngSubmit)="savedata()">
+
+        <table>
+
+            <tr>
+                <td><label for="name">Full Name</label></td>
+                <td><input type="text" name="name" [(ngModel)]="stud.name" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email ID</label></td>
+                <td><input type="email" name="email" [(ngModel)]="stud.email" required></td>
+            </tr>
+            <tr>
+                <td><label for="mobile">Mobile No.</label></td>
+                <td><input type="tel" name="mobile" [(ngModel)]="stud.mobile" required></td>
+            </tr>
+            <tr>
+                <td><label for="city">City</label></td>
+                <td><input type="text" name="city" [(ngModel)]="stud.city" required></td>
+            </tr>
+            <tr>
+                <td><label for="state">State</label></td>
+                <td><input type="text" name="state" [(ngModel)]="stud.state" required></td>
+            </tr>
+            <tr>
+                <td><label for="DOB">Date of Birth</label></td>
+                <td><input type="date" name="DOB" [(ngModel)]="stud.dob" required></td>
+            </tr>
+            <tr>
+                <td><label for="qualification">Qualification</label></td>
+                <td><input type="text" name="qualification" [(ngModel)]="stud.qualification" required></td>
+            </tr>
+            <tr>
+                <td><label for="yearofcompletion">Year of Completion</label></td>
+                <td><input type="date" name="yearofcompletion" [(ngModel)]="stud.yearofcompletion" required></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Save Student" [disabled]="!regform.valid"></td>
+            </tr>
+
+        </table>
+
+    </form> 
 
 </div>
