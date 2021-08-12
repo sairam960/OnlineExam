@@ -6,7 +6,8 @@
         <li><a routerLink="/homeLink">Home</a></li>
     </ul>
   </div>
-<br><br><br><br>
+<div id="body">
+<h2> Student Registration Form</h2>
 
 <div id="container">
 
@@ -50,12 +51,18 @@
                 <td><label for="yearofcompletion">Year of Completion</label></td>
                 <td><input type="date" name="yearofcompletion" [(ngModel)]="stud.yearofcompletion" required></td>
             </tr>
-            <tr>
+            <br>
+            <!-- <tr>
                 <td><input type="submit" value="Save Student" [disabled]="!regform.valid"></td>
-            </tr>
-            
+            </tr> -->
+
         </table>
+            <div id="but"><input type="submit" value="Save Student" [disabled]="!regform.valid"></div>
+            <div> <br> </div>
 
     </form> 
+
+</div>
+
 
 </div>
