@@ -23,8 +23,8 @@ public class Exam {
 	@Column(name="score")
 	private int score;
 	
-	@Column(name="level")
-	private int level;
+	@Column(name="lvl")
+	private int lvl;
 	
 	@Column(name="start")
 	private LocalDate start;
@@ -59,11 +59,11 @@ public class Exam {
 	public void setScore(int score) {
 		this.score = score;
 	}
-	public int getLevel() {
-		return level;
+	public int getlvl() {
+		return lvl;
 	}
-	public void setLevel(int level) {
-		this.level = level;
+	public void setlvl(int lvl) {
+		this.lvl = lvl;
 	}
 	public LocalDate getStart() {
 		return start;
