@@ -14,6 +14,8 @@ import { ReportComponent } from './report/report.component';
 import { AdminquesComponent } from './adminques/adminques.component';
 import { StudentdashboardComponent } from './studentdashboard/studentdashboard.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { AboutUsComponent} from'./about-us/about-us.component';
+
 const routes: Routes = [
   {
     path: '', component: HomeComponent
@@ -51,7 +53,9 @@ const routes: Routes = [
   {path:'searchLink', component:SearchComponent},
   {path:'adminques',component:AdminquesComponent},
   {path:'studentdashboard',component:StudentdashboardComponent},
-  {path:'questions',component:QuestionsComponent}
+  {path:'questions',component:QuestionsComponent},
+  {path:'aboutusLink',component:AboutUsComponent}
+
 ];
 
 @NgModule({

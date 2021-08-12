@@ -19,6 +19,7 @@ import { NextLevelComponent } from './next-level/next-level.component';
 import { AdminquesComponent } from './adminques/adminques.component';
 import { StudentdashboardComponent } from './studentdashboard/studentdashboard.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { QuestionsComponent } from './questions/questions.component';
     NextLevelComponent,
     AdminquesComponent,
     StudentdashboardComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    AboutUsComponent
 
   ],
   imports: [
