@@ -17,7 +17,7 @@ export class AdminLoginComponent implements OnInit {
   checkadmin(){
     
     if(this.userName=="Admin" && this.password=="Admin@123"){
-      this.router.navigate(['/homeLink']);
+      this.router.navigate(['/adminques']);
       sessionStorage.setItem("uname", this.userName);
 
     }else{

@@ -16,6 +16,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { HttpClientModule} from '@angular/common/http';
 import { NotClearComponent } from './not-clear/not-clear.component';
 import { NextLevelComponent } from './next-level/next-level.component';
+import { AdminquesComponent } from './adminques/adminques.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NextLevelComponent } from './next-level/next-level.component';
     StudentLoginComponent,
     AdminLoginComponent,
     NotClearComponent,
-    NextLevelComponent
+    NextLevelComponent,
+    AdminquesComponent
 
   ],
   imports: [

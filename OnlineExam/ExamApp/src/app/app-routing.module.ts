@@ -11,6 +11,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { NotClearComponent } from './not-clear/not-clear.component';
 import { NextLevelComponent } from './next-level/next-level.component';
 import { ReportComponent } from './report/report.component';
+import { AdminquesComponent } from './adminques/adminques.component';
 const routes: Routes = [
   {
     path: '', component: HomeComponent
@@ -45,7 +46,8 @@ const routes: Routes = [
   {path:'PythonTest',component:InstructionComponent},
   {path:'AngularTest',component:InstructionComponent},
   {path:'ExamPage',component:ExampageComponent},
-  {path:'searchLink', component:SearchComponent}
+  {path:'searchLink', component:SearchComponent},
+  {path:'adminques',component:AdminquesComponent}
 ];
 
 @NgModule({
