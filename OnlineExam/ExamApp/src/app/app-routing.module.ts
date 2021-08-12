@@ -32,7 +32,7 @@ const routes: Routes = [
   {path:'PythonTest',component:InstructionComponent},
   {path:'AngularTest',component:InstructionComponent},
   {path:'ExamPage',component:ExampageComponent},
-  {path:'Search', component:SearchComponent}
+  {path:'searchLink', component:SearchComponent}
 ];
 
 @NgModule({
