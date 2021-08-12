@@ -14,7 +14,7 @@ import { NotClearComponent } from './not-clear/not-clear.component';
 import { NextLevelComponent } from './next-level/next-level.component';
 const routes: Routes = [
   {
-    path: '', component: HomeComponent
+    path: '', component:HomeComponent
   },
   {
     path: 'homeLink', component: HomeComponent
@@ -42,8 +42,12 @@ const routes: Routes = [
   {path:'PythonTest',component:InstructionComponent},
   {path:'AngularTest',component:InstructionComponent},
   {path:'ExamPage',component:ExampageComponent},
+<<<<<<< Updated upstream
   {path:'searchLink', component:SearchComponent},
   {path:'TakeTest',component:QuestionsComponent},
+=======
+  {path:'questionsLink',component:QuestionsComponent},
+>>>>>>> Stashed changes
   {path:'Search', component:SearchComponent}
 ];
 
