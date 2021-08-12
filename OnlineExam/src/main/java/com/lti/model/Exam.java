@@ -90,7 +90,7 @@ public class Exam {
 		this.studentId = studentId;
 		this.subjectId = subjectId;
 		this.score = score;
-		this.level = level;
+		this.lvl = lvl;
 		this.start = start;
 		this.end = end;
 		this.status = status;
