@@ -15,6 +15,7 @@ import { NotClearComponent } from './not-clear/not-clear.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
