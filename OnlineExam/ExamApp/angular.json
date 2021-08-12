@@ -32,7 +32,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              
+              "src/assets/js/jsondata.js",
+              "src/assets/js/ques.js"
+
+            ]
           },
           "configurations": {
             "production": {
