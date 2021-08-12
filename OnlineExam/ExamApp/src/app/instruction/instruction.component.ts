@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-instruction',
@@ -7,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstructionComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private route:Router) { }
+  gotoquestion()
+  {
+     this.route.navigate(['/questions'])
+  }
+  gotohome()
+  {
+    this.route.navigate(['/homeLink'])
+  }
   ngOnInit(): void {
   }
 

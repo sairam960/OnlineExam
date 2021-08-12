@@ -18,6 +18,7 @@ import { NotClearComponent } from './not-clear/not-clear.component';
 import { NextLevelComponent } from './next-level/next-level.component';
 import { AdminquesComponent } from './adminques/adminques.component';
 import { StudentdashboardComponent } from './studentdashboard/studentdashboard.component';
+import { QuestionsComponent } from './questions/questions.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { StudentdashboardComponent } from './studentdashboard/studentdashboard.c
     NotClearComponent,
     NextLevelComponent,
     AdminquesComponent,
-    StudentdashboardComponent
+    StudentdashboardComponent,
+    QuestionsComponent
 
   ],
   imports: [

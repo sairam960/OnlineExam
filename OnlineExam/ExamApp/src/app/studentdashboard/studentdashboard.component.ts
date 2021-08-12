@@ -12,6 +12,10 @@ export class StudentdashboardComponent implements OnInit {
   {
       this.route.navigate(['/ExamPage']);
   }
+  gotoreport()
+  {
+    this.route.navigate(['/report'])
+  }
   ngOnInit(): void {
   }
 

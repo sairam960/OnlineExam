@@ -13,6 +13,7 @@ import { NextLevelComponent } from './next-level/next-level.component';
 import { ReportComponent } from './report/report.component';
 import { AdminquesComponent } from './adminques/adminques.component';
 import { StudentdashboardComponent } from './studentdashboard/studentdashboard.component';
+import { QuestionsComponent } from './questions/questions.component';
 const routes: Routes = [
   {
     path: '', component: HomeComponent
@@ -49,7 +50,8 @@ const routes: Routes = [
   {path:'ExamPage',component:ExampageComponent},
   {path:'searchLink', component:SearchComponent},
   {path:'adminques',component:AdminquesComponent},
-  {path:'studentdashboard',component:StudentdashboardComponent}
+  {path:'studentdashboard',component:StudentdashboardComponent},
+  {path:'questions',component:QuestionsComponent}
 ];
 
 @NgModule({
