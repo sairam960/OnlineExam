@@ -1,18 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { InstructionComponent } from './instruction/instruction.component';
 import { ExampageComponent } from './exampage/exampage.component';
 import { AddComponent } from './add/add.component';
+
 import { QuestionsComponent } from './questions/questions.component';
+
+import { SearchComponent } from './search/search.component';
+import { StudentLoginComponent } from './student-login/student-login.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+
 const routes: Routes = [
+  {
+    path: '', component: HomeComponent
+  },
   {
     path: 'homeLink', component: HomeComponent
   },
   {
-    path: 'loginLink', component: LoginComponent
+    path: 'student-loginLink', component: StudentLoginComponent
+  },
+  {
+    path: 'admin-loginLink', component: AdminLoginComponent
   },
   {
     path: 'registerLink', component: RegisterComponent
@@ -25,7 +36,11 @@ const routes: Routes = [
   {path:'PythonTest',component:InstructionComponent},
   {path:'AngularTest',component:InstructionComponent},
   {path:'ExamPage',component:ExampageComponent},
-  {path:'TakeTest',component:QuestionsComponent}
+
+  {path:'TakeTest',component:QuestionsComponent},
+
+  {path:'Search', component:SearchComponent}
+
 ];
 
 @NgModule({

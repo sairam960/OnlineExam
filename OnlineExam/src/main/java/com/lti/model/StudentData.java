@@ -4,7 +4,10 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -13,6 +16,8 @@ public class StudentData {
 	
 	@Id
 	@Column(name="studentid")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "studid_generator")
+	@SequenceGenerator(name = "studid_generator", initialValue = 100, allocationSize = 1, sequenceName = "studentid_seq")
 	private int studentid;
 	
 	@Column(name="name")

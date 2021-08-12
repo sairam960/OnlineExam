@@ -13,31 +13,13 @@ public class Response {
 	@Id
 	@Column(name="responseId")
 	private int responseId;
-	@Column(name="examId")
-	private int examId;
-	@Column(name="studentId")
-	private String studentId;
-	@Column(name="status")
-	private String status;
 	@Column(name="answers")
-	private List<String> answers=new ArrayList<>();
+	private String answers;
 	@Column(name="correct")
-	private List<String> correct=new ArrayList<>();
-	private int score;
+	private String correct;
 	public Response() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-	public Response(int responseId, int examId, String studentId, String status, List<String> answers,
-			List<String> correct, int score) {
-		super();
-		this.responseId = responseId;
-		this.examId = examId;
-		this.studentId = studentId;
-		this.status = status;
-		this.answers = answers;
-		this.correct = correct;
-		this.score = score;
 	}
 	public int getResponseId() {
 		return responseId;
@@ -45,43 +27,26 @@ public class Response {
 	public void setResponseId(int responseId) {
 		this.responseId = responseId;
 	}
-	public int getExamId() {
-		return examId;
-	}
-	public void setExamId(int examId) {
-		this.examId = examId;
-	}
-	public String getStudentId() {
-		return studentId;
-	}
-	public void setStudentId(String studentId) {
-		this.studentId = studentId;
-	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	public List<String> getAnswers() {
+	public String getAnswers() {
 		return answers;
 	}
-	public void setAnswers(List<String> answers) {
+	public void setAnswers(String answers) {
 		this.answers = answers;
 	}
-	public List<String> getCorrect() {
+	public String getCorrect() {
 		return correct;
 	}
-	public void setCorrect(List<String> correct) {
+	public void setCorrect(String correct) {
 		this.correct = correct;
 	}
-	public int getScore() {
-		return score;
+	
+	public Response(int responseId, String answers, String correct) {
+		super();
+		this.responseId = responseId;
+		this.answers = answers;
+		this.correct = correct;
 	}
-	public void setScore(int score) {
-		this.score = score;
-	}
-
+	
 	
 	
 }
