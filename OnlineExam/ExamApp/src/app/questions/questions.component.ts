@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
- declare var checkAnswer: any;
+ declare function checkAnswer():void 
+   
+ 
 
 @Component({
   selector: 'app-questions',
@@ -9,11 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionsComponent implements OnInit {
 
-  constructor() { }
- CallcheckAnswer()
- {
-   checkAnswer()
- }
+  constructor() {
+    checkAnswer()
+   }
+ 
+  
+ 
   ngOnInit() {
     
   }
