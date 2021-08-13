@@ -21,8 +21,14 @@ export class StudentLoginComponent implements OnInit {
 
   loginStudent(){
     this.studservice.loginStudentFromRemote(this.stud1).subscribe(
-      (data)=> console.log("response recieved"),
-      (_error) => console.log("exception occured")
+      (_data) => {
+        console.log("response recieved")
+        this.router.navigate(['/ExamPage']);
+      },
+      (_error) => {
+        console.log("exception occured");
+      alert("Credentials not found! Please Register First");
+      }
     )
   }
 }
