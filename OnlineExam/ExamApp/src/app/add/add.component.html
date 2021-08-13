@@ -9,8 +9,6 @@
   <option value="Python">Python</option>
 </select>
 
-<br>
-<br>
 
 <br>
 <label for="level">Choose a Level</label>
@@ -27,6 +25,7 @@
 
   <input type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
     accept=".csv" />
+    <input type="button" (click)="addQuestion()" value="Submit Questions">
 
 </div>
 
@@ -43,6 +42,7 @@
         <th>Option 3</th>
         <th>Option 4</th>
         <th>Answer</th>
+        <th>Subject ID</th>
       </tr>
     </thead>
     <tbody style="color: black;">
@@ -50,7 +50,7 @@
 
         <td>{{i+1}}</td>
         <td>
-          <span>{{csvData.level}}</span>
+          <span>{{csvData.lvl}}</span>
         </td>
         <td>
           <span>{{csvData.question}}</span>
@@ -70,6 +70,10 @@
         <td>
             <span>{{csvData.ans}}</span>
         </td>
+        <td>
+          <span>{{csvData.subject_Id}}</span>
+        </td>
+        
 
       </tr>
     </tbody>

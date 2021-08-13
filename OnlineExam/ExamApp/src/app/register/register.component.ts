@@ -20,13 +20,12 @@ export class RegisterComponent implements OnInit {
   }
 
   savedata(){
-
     this.studservice.addNewStudent(this.stud).subscribe(
       (data)=>{
         console.log("return Value from REST"+data)
       }
     )  
-    alert("Student Register!, Please click OK and Proceed to Login")
+    alert("Student Register! Please click OK and Proceed to Login")
     this.router.navigate(['/student-loginLink']);
   }
 }

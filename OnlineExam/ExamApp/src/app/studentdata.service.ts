@@ -15,7 +15,10 @@ export class StudentdataService {
   //adding new student
   addNewStudent(student:StudentData){
     return this.httpClient.post(this.baseUrl+"/students",student)
-
   }
 
+  //check login 
+  loginStudentFromRemote(student1:StudentData):Observable<any>{
+    return this.httpClient.post<any>(this.baseUrl+"/studentlogin",student1)
+  }
 }
