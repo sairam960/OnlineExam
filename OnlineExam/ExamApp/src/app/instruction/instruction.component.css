@@ -13,14 +13,14 @@ h5
 }
 h1 {
 	font-size: 2rem;
-	text-align: center;
+	
 	font-weight: bolder;
 	margin-bottom: 1rem;
 }
 
 h2{
 text-align:left;
-text-align: center;
+
 	color: rgb(22, 49, 65);
     font-size: 30px;
 }
@@ -40,11 +40,7 @@ button {
 	 text-align: right;
         
 }
-.start
-{
-	text-align:center;
-	
-}
+
 li
 {
 	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
