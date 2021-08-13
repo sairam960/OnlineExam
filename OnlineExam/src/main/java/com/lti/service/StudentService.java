@@ -10,4 +10,8 @@ public interface StudentService {
 	
 	public boolean addStudent(StudentData student);
 	
+	public StudentData fetchStudentByEmail(String email);
+	
+	public StudentData fetchStudentByEmailAndPassword(String email, String password);
+	
 }

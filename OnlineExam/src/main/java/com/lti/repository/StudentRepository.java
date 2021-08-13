@@ -8,7 +8,10 @@ import com.lti.model.StudentData;
 
 @Repository
 public interface StudentRepository extends JpaRepository<StudentData, Integer> {
+
+	public StudentData findByEmail(String email);
 	
+	public StudentData findByEmailAndPassword(String email, String password);
 	
 	
 }

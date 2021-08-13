@@ -28,4 +28,16 @@ public class StudentServiceImpl implements StudentService{
 		return true;
 	}
 
+	@Override
+	public StudentData fetchStudentByEmail(String email) {
+		return studRepo.findByEmail(email);
+		 
+	}
+
+	@Override
+	public StudentData fetchStudentByEmailAndPassword(String email, String password) {
+		return studRepo.findByEmailAndPassword(email, password);
+	}
+
+	
 }
