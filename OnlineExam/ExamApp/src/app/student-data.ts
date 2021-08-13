@@ -4,10 +4,10 @@ export class StudentData {
     email:string|undefined;
     password:string|undefined; 
     mobile:number|undefined;
-    dob:Date|undefined; 
+    dob:Date; 
     city:string|undefined; 
     state:string|undefined; 
-    yearofcompletion:Date|undefined; 
+    yearofcompletion:Date; 
     qualification:string|undefined;
     
 }

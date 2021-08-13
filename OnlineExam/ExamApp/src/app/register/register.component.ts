@@ -20,7 +20,6 @@ export class RegisterComponent implements OnInit {
   }
 
   savedata(){
-
     this.studservice.addNewStudent(this.stud).subscribe(
       (data)=>{
         console.log("return Value from REST"+data)
