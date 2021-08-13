@@ -21,6 +21,7 @@ export class AdminLoginComponent implements OnInit {
       sessionStorage.setItem("uname", this.userName);
 
     }else{
+    alert("Credentials Don't match Admin")
     this.router.navigate(['/admin-loginLink']);
     }
   }

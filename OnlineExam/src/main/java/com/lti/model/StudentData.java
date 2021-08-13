@@ -1,5 +1,6 @@
 package com.lti.model;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -33,7 +34,7 @@ public class StudentData {
 	private long mobile;
 	
 	@Column(name="dob")
-	private LocalDate dateOfBirth;
+	private Date dateOfBirth;
 	
 	@Column(name="city")
 	private String city;
@@ -45,13 +46,13 @@ public class StudentData {
 	private String qualification;
 	
 	@Column(name="yearofcompletion")
-	private LocalDate yearOfCompletion;
+	private Date yearOfCompletion;
 	
 	public StudentData() {
 		super();
 	}
-	public StudentData(int studentId, String name, String email, String password, long mobile, LocalDate dateOfBirth,
-			String city, String state, String qualification, LocalDate yearOfCompletion, int studentid) {
+	public StudentData(int studentId, String name, String email, String password, long mobile, Date dateOfBirth,
+			String city, String state, String qualification, Date yearOfCompletion, int studentid) {
 		super();
 		this.studentid = studentid;
 		this.name = name;
@@ -94,10 +95,10 @@ public class StudentData {
 	public void setMobile(long mobile) {
 		this.mobile = mobile;
 	}
-	public LocalDate getDateOfBirth() {
+	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
-	public void setDateOfBirth(LocalDate dateOfBirth) {
+	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 	public String getCity() {
@@ -118,10 +119,10 @@ public class StudentData {
 	public void setQualification(String qualification) {
 		this.qualification = qualification;
 	}
-	public LocalDate getYearOfCompletion() {
+	public Date getYearOfCompletion() {
 		return yearOfCompletion;
 	}
-	public void setYearOfCompletion(LocalDate yearOfCompletion) {
+	public void setYearOfCompletion(Date yearOfCompletion) {
 		this.yearOfCompletion = yearOfCompletion;
 	}
 	
