@@ -7,9 +7,10 @@
     </ul>
   </div>
 <div id="body">
-<h2> Student Registration Form</h2>
+
 
 <div id="container">
+    <h2> Student Registration Form</h2>
 
     <form #regform="ngForm" (ngSubmit)="savedata()">
 
@@ -83,7 +84,7 @@
             </div>
 
             <tr>
-                <td><label for="yearofcompletion">Year of Completion</label></td>
+                <td><label for="yearofcompletion">Year of Completion &nbsp; &nbsp;  </label></td>
                 <td><input type="date" #uy="ngModel" name="yearofcompletion" [(ngModel)]="stud.yearofcompletion" required></td>
             </tr>
             <div *ngIf="uy.invalid && (uy.dirty||uy.touched)" style="color: red;" >
