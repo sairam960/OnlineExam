@@ -3,7 +3,10 @@ package com.lti.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name="question_data")
@@ -13,15 +16,12 @@ public class Questions {
 	@Column(name="quesid")
 	private int quesid;
 	
-	@Column(name="subjectId")
-	private int subjectId;
-	
 	@Column(name="lvl")
 	private int lvl;
 	
 	@Column(name="question")
 	private String question;
-	
+		
 	@Column(name="op1")
 	private String op1;
 	
@@ -36,6 +36,11 @@ public class Questions {
 	
 	@Column(name="ans")
 	private String ans;
+	
+	@ManyToOne
+	//@JsonIgnore
+	@JoinColumn(name="subjectId")
+	private Subject subject;
 
 	public int getQuesid() {
 		return quesid;
@@ -43,14 +48,6 @@ public class Questions {
 
 	public void setQuesid(int quesid) {
 		this.quesid = quesid;
-	}
-
-	public int getSubjectId() {
-		return subjectId;
-	}
-
-	public void setSubjectId(int subjectId) {
-		this.subjectId = subjectId;
 	}
 
 	public int getLvl() {
@@ -114,20 +111,7 @@ public class Questions {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Questions(int quesid, int subjectId, int lvl, String question, String op1, String op2, String op3,
-			String op4, String ans) {
-		super();
-		this.quesid = quesid;
-		this.subjectId = subjectId;
-		this.lvl = lvl;
-		this.question = question;
-		this.op1 = op1;
-		this.op2 = op2;
-		this.op3 = op3;
-		this.op4 = op4;
-		this.ans = ans;
-	}
-	
+
 	
 	
 

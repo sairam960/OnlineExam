@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgxCsvParser, NgxCSVParserError } from 'ngx-csv-parser';
+import { AdminServiceService } from '../admin-service.service';
+import { Question } from '../question';
 
 @Component({
   selector: 'app-add',
@@ -20,8 +23,9 @@ export class AddComponent implements OnInit {
   csvRecords: any[] = [];
   header: boolean = true;
 
-  constructor(private ngxCsvParser: NgxCsvParser) {
+  constructor(private ngxCsvParser: NgxCsvParser, private adminservice:AdminServiceService,private router:Router) {
   }
+  ques:Question;
 
   @ViewChild('fileImportInput') fileImportInput: any;
 
@@ -37,6 +41,23 @@ export class AddComponent implements OnInit {
       }, (error: NgxCSVParserError) => {
         console.log('Error', error);
       });
+  }
+
+  addQuestion()
+  {
+    
+    this.csvRecords.forEach(element => {this.ques=element;
+      console.log(this.ques)
+      this.adminservice.addQuestion(this.ques).subscribe(
+        (data)=>{
+          console.log("return Value from REST"+data)
+        }
+      )  
+    });
+    
+    
+    alert("Questions Added")
+
   }
 
   ngOnInit(): void {
