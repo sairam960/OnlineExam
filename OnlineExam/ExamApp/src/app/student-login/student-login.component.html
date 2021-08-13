@@ -14,15 +14,16 @@
     <br><br>
     <form #loginForm="ngForm" (ngSubmit)="formSubmit(loginForm)" novalidate>
       <div class="body">
-          Email ID: <input type="text" placeholder="Email ID" [(ngModel)]="email" id="mail" name="empmail" required email  ngModel > <br><br><br>
-          <div *ngIf="!email?.valid && (email?.dirty || email?.touched)" class="error">
-              <div *ngIf="email.errors.required">
+          Email ID: <input type="text" placeholder="Email ID" [(ngModel)]="email" id="mail" name="empmail" required email  #em="ngModel" > 
+          <div *ngIf="!em?.valid && (em?.dirty || em?.touched)" class="error">
+              <div *ngIf="em.errors.required">
                 Email is required
               </div>
-              <div *ngIf="email.errors.email">
+              <div *ngIf="em.errors.email">
                 Invalid Email Address
               </div>
           </div>
+          <br><br><br>
           Password: <input type="password" placeholder="Password" [(ngModel)]="password" required minlength="6" ngModel> 
           <a routerLink="/forgetpasswordLink"><br><br>
               Forget Password</a> <br><br><br>
@@ -32,4 +33,3 @@
     </form>
     <br><br>
   </div>
-</div>
