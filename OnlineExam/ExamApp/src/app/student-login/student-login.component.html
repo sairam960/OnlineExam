@@ -21,10 +21,9 @@
           </div>
 
           <br><br><br>
-          Password: <input type="password" placeholder="Password" #up="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" [(ngModel)]="password" > 
+          Password: <input type="password" placeholder="Password" #up="ngModel" required [(ngModel)]="password" > 
           <div *ngIf="up.invalid && (up.dirty||up.touched)" style="color: red;" >
             <div *ngIf="up.errors?.required">*Password is required</div>
-            <div *ngIf="up.errors?.pattern">*Password must be of Strong</div>
           </div>
 
           <a routerLink="/forgetpasswordLink"><br><br>
