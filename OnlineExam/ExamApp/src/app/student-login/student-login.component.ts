@@ -9,18 +9,15 @@ import { Router } from '@angular/router';
 })
 export class StudentLoginComponent implements OnInit {
 
-  email:any;
-  password:string;
-  formSubmit(LoginForm:any)
-  {
-    console.log(LoginForm.value);
-  }
+ userName:string;
+ password:string;
+  
   constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
-  checkStudent(){
-    
+  loginStudent(){
+
   }
 }
