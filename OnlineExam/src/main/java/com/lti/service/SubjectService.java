@@ -13,4 +13,5 @@ public interface SubjectService
 	public List<Subject> getSubject();
 	
 	public boolean deleteSubject(Subject subject);
+
 }

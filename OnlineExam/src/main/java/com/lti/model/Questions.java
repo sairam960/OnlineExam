@@ -111,6 +111,27 @@ public class Questions {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Subject getSubject() {
+		return subject;
+	}
+
+	public void setSubject(Subject subject) {
+		this.subject = subject;
+	}
+
+	public Questions(int quesid, int lvl, String question, String op1, String op2, String op3, String op4, String ans,
+			Subject subject) {
+		super();
+		this.quesid = quesid;
+		this.lvl = lvl;
+		this.question = question;
+		this.op1 = op1;
+		this.op2 = op2;
+		this.op3 = op3;
+		this.op4 = op4;
+		this.ans = ans;
+		this.subject = subject;
+	}
 
 	
 	

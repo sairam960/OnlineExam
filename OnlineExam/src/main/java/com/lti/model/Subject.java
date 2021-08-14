@@ -1,27 +1,20 @@
 package com.lti.model;
 
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name="Subjects_data")
+@Table(name="subjects_data")
 public class Subject {
 	@Id
 	@Column(name="subjectId")
 	private int subjectId;
 	@Column(name="subjectName")
 	private String subjectName;
-	
-	@OneToMany(mappedBy = "subject")
-	@JsonIgnore
-	private List<Questions>questions;
 	
 	public Subject() {
 		super();
