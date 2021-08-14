@@ -5,6 +5,9 @@ import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,11 +17,6 @@ public class Exam {
 	@Column(name="examId")
 	private int examId;
 	
-	@Column(name="studentId")
-	private int studentId;
-	
-	@Column(name="subjectId")
-	private int subjectId;
 	
 	@Column(name="score")
 	private int score;
@@ -34,6 +32,18 @@ public class Exam {
 	
 	@Column(name="status")
 	private boolean status;
+	
+	@OneToOne
+	@JoinColumn(name="studentId")
+	private StudentData stud;
+	
+	@ManyToOne
+	@JoinColumn(name="subjectId")
+	private Subject sub;
+	
+	@OneToOne
+	@JoinColumn(name="responseId")
+	private Response res;
 
 	public int getExamId() {
 		return examId;
@@ -43,21 +53,6 @@ public class Exam {
 		this.examId = examId;
 	}
 
-	public int getStudentId() {
-		return studentId;
-	}
-
-	public void setStudentId(int studentId) {
-		this.studentId = studentId;
-	}
-
-	public int getSubjectId() {
-		return subjectId;
-	}
-
-	public void setSubjectId(int subjectId) {
-		this.subjectId = subjectId;
-	}
 
 	public int getScore() {
 		return score;
@@ -98,18 +93,43 @@ public class Exam {
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
+	
+	public StudentData getStud() {
+		return stud;
+	}
 
-	public Exam(int examId, int studentId, int subjectId, int score, int lvl, LocalDate starttime, LocalDate endtime,
-			boolean status) {
+	public void setStud(StudentData stud) {
+		this.stud = stud;
+	}
+
+	public Subject getSub() {
+		return sub;
+	}
+
+	public void setSub(Subject sub) {
+		this.sub = sub;
+	}
+
+	public Response getRes() {
+		return res;
+	}
+
+	public void setRes(Response res) {
+		this.res = res;
+	}
+
+	public Exam(int examId, int score, int lvl, LocalDate starttime, LocalDate endtime, boolean status,
+			StudentData stud, Subject sub, Response res) {
 		super();
 		this.examId = examId;
-		this.studentId = studentId;
-		this.subjectId = subjectId;
 		this.score = score;
 		this.lvl = lvl;
 		this.starttime = starttime;
 		this.endtime = endtime;
 		this.status = status;
+		this.stud = stud;
+		this.sub = sub;
+		this.res = res;
 	}
 
 	public Exam() {

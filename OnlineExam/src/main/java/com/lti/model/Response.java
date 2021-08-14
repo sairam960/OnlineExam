@@ -1,10 +1,13 @@
 package com.lti.model;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
 @Entity
 @Table(name="Response")
 public class Response {
@@ -15,10 +18,18 @@ public class Response {
 	private String answers;
 	@Column(name="correct")
 	private String correct;
+	
+	@OneToOne
+	@JoinColumn(name="studentId")
+	private StudentData stud;
+	@ManyToOne
+	@JoinColumn(name="subjectId")
+	private Subject sub;
+	
 	public Response() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+	
 	public int getResponseId() {
 		return responseId;
 	}
