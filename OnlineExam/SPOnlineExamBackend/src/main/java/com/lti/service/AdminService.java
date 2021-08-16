@@ -18,22 +18,6 @@ public class AdminService {
 	@Autowired
 	private QuestionRepository questionRepository;
 	
-	/*@Autowired 
-	AdminService ad;*/
-	
-	public String adminLogin(String email, String password) {
-		
-		
-		if(email.equals("Admin") && password.equals("Admin")) {
-
-			return email;
-			
-		} else {
-
-			throw new UserServiceException("Only Admins Allowed");
-		}
-	}
-	
 	public int addquestion(Question question) {
 		if(questionRepository.isQuestionPresent(question.getQuestion())) {
 			throw new AdminServiceException("Question already Exists!!");

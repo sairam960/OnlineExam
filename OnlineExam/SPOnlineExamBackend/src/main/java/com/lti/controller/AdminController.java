@@ -22,28 +22,6 @@ public class AdminController {
 	@Autowired
 	private AdminService adminService;
 	
-	@PostMapping("/adminLogin")
-	public AdminLoginStatus adminlogin(@RequestBody AdminLogin login) {
-		try {
-			
-			String ademail = adminService.adminLogin(login.getEmail(), login.getPassword());
-			
-			AdminLoginStatus loginStatus = new AdminLoginStatus();
-			loginStatus.setStatus(true);
-			loginStatus.setMessage("Login successful!");
-			loginStatus.setName("Admin");
-			loginStatus.setEmail(ademail);
-			return loginStatus;
-		}
-		catch(UserServiceException e) {
-			
-			AdminLoginStatus loginStatus = new AdminLoginStatus();
-			loginStatus.setStatus(false);
-			loginStatus.setMessage(e.getMessage());		
-			return loginStatus;
-		}
-	}
-	
 	@PostMapping("/addQuestion")
 	public AddQuestionStatus addquestion(@RequestBody Question question) {
 		try {
