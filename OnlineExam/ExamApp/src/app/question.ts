@@ -9,7 +9,8 @@ export class Question {
     option3:String;
     option4:String;
     answer:String;
-    sub:Subject=new Subject();
+    SubjectName:string;
+    SubjectId:Number;
     level:String;
 
 }
