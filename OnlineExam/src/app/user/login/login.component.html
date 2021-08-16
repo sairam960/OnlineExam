@@ -1,17 +1,39 @@
+<div class="topnav">
+    <a routerLink="/home-page">Home</a>
+    <a routerLink='/user-register'>Register</a>
+    <a routerLink='/admin-login'> Admin Login</a>
+   </div>
+
+
 <div>{{message}}</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <form (ngSubmit)="loginCheck()" class="box"> 
-                    <h1>Login</h1>
-                    <p > Please enter your email and password!</p>
-                    <input type="text" name="email" placeholder="email"  [(ngModel)]=login.emailId> 
-                    <input type="password" name="password" placeholder="Password"  [(ngModel)]=login.password>
-                     <a  routerLink='/forgot-password'>Forgot password?</a> 
-                     <button class="loginbtn">Login</button>
-                </form>
+
+<div id="page">
+    <div id="container">
+      <br>
+      <h1 style="text-align: center; color: black;">
+        Student Login Page
+      </h1>
+      <br><br>
+      <form #loginForm="ngForm" (ngSubmit)="loginCheck()">
+        <div class="body">
+            Email ID: <input type="text" placeholder="Email ID" #ue="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,4}$" [(ngModel)]="login.emailId" [ngModelOptions]="{standalone: true}"> 
+            <div *ngIf="ue.invalid && (ue.dirty||ue.touched)" style="color: red;" >
+              <div *ngIf="ue.errors?.required">*Email is required</div>
+              <div *ngIf="ue.errors?.pattern">*Email ID is invalid</div>
             </div>
+  
+            <br><br><br>
+            Password: <input type="password" placeholder="Password" #up="ngModel" required [(ngModel)]="login.password" [ngModelOptions]="{standalone: true}"> 
+            <div *ngIf="up.invalid && (up.dirty||up.touched)" style="color: red;" >
+              <div *ngIf="up.errors?.required">*Password is required</div>
+            </div>
+  
+            <a routerLink="/forgot-password"><br><br>
+                Forget Password</a> <br><br>
+            <button type="submit"  [disabled]="!loginForm.valid">Login</button><br><br><br>
+  
+            Don't have an Account? <a routerLink="/user-register">Register Here</a> 
         </div>
+      </form>   
+      <br><br>
     </div>
-</div>
