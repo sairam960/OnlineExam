@@ -12,8 +12,6 @@ import { NgbDate } from '@ng-bootstrap/ng-bootstrap';
 export class RegisterComponent implements OnInit {
 
   stud:StudentData;
-  date:NgbDate;
-  newDate:Date;
   constructor(private studservice:StudentdataService, private router:Router) { 
     this.stud=new StudentData();
     
@@ -24,13 +22,7 @@ export class RegisterComponent implements OnInit {
 
   savedata(){
 
-    this.newDate=new Date(
-      this.date.year,
-      this.date.month-1,
-      this.date.day
-
-    );
-    this.stud.dob=this.newDate.toLocaleDateString();
+    
     this.studservice.addNewStudent(this.stud).subscribe(
       (data)=>{
         console.log("return Value from REST"+data)

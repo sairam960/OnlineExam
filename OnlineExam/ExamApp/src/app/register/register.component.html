@@ -70,9 +70,8 @@
 
             <tr>
                 <td><label for="dob">Date of Birth</label></td>
-                <td><input type="date" #ud="ngModel" name="dob" [(ngModel)]="date" required placeholder="yyyy-mm-dd" ngbDatepicker #d="ngbDatepicker"></td>
+                <td><input type="date" #ud="ngModel" name="dob" [(ngModel)]="stud.dob" required ></td>
             </tr>
-            {{stud.dob}}
             <div *ngIf="ud.invalid && (ud.dirty||ud.touched)" style="color: red;" >
                 <div *ngIf="ud.errors?.required">*Date of Birth is required</div>
             </div>
