@@ -22,6 +22,7 @@ import { UserReportComponent } from './user/user-report/user-report.component';
 const routes: Routes = [
 
   {path:'',component:HomePageComponent},
+  {path:'home-page',component:HomePageComponent},
   {path:'user-login',component:LoginComponent},
   {path:'user-register',component:RegisterComponent},
   {path:'admin-login',component:AdminLoginComponent},

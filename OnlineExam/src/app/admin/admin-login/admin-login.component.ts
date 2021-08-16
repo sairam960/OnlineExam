@@ -11,34 +11,20 @@ import { AdminService } from '../admin.service';
 
 export class AdminLoginComponent {
 
-  adlogin: AdminLogin = new AdminLogin();
-  message: String;
-
-  constructor(private adminService: AdminService, private router: Router) {}
+  userName:string;
+  password:string;
+  constructor(private router: Router) {}
 
   login() {
 
-    console.log(this.adlogin.email);
-    console.log(this.adlogin.password);
-    this.adminService.loginAdmin(this.adlogin).subscribe(response => {
-      //alert(JSON.stringify(response));
+  if(this.userName=="Admin" && this.password=="Admin@123"){
+    this.router.navigate(['/admin-profile']);
+    sessionStorage.setItem("uname", this.userName);
 
-      if(response.status == true) {
-
-        let userName = response.name;
-        sessionStorage.setItem('userName', userName);
-        this.router.navigateByUrl('/admin-profile');
-      } else {
-
-        this.message = response.message;
-        alert(this.message);
-      }
-    })    
+  }else{
+  alert("Credentials Don't match Admin")
+  this.router.navigate(['/admin-login']);
   }
 }
 
-export class AdminLogin  {
-
-  email: String;
-  password: String;
 }
