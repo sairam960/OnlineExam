@@ -132,7 +132,7 @@ export class TestComponent {
   finish() {
     for (let i = 0; i < this.total_question; i++) {
       if (this.userResponses[i].userAnswer == this.questions[i].answer) {
-        this.marks += 1;
+        this.marks += 2;
       }
     }
     this.finished = 1;
