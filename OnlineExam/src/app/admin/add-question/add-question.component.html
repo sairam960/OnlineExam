@@ -1,0 +1,42 @@
+<div class="navbar">
+    <div class="welcome_text">Welcome, Admin</div>
+    <button class="back" (click)="goBack()">Back</button>
+    <button class="logout" (click)="adminLogout()">Logout</button>
+</div>
+<div >
+    <div class="container">
+
+        <form (ngSubmit)="addQuestion()">
+            <label>Choose The Subject</label>
+            <select  name="subject" [(ngModel)]="question.subject.name" value="java">
+                   <option *ngFor="let s of subjects">{{s.name}}</option>
+            </select><br/><br/>
+            <label>Choose The Level Of Difficulty</label>
+            <select name="level" [(ngModel)]="question.level">
+                <option> 1</option>
+                <option> 2</option>
+                <option> 3</option>
+            </select><br/><br/>
+            <label>Enter Question</label>
+            <input type="text" placeholder="Question" name="question" [(ngModel)]="question.question">
+
+            <label>Enter Option 1</label>
+            <input type="text" placeholder="Option 1" name="option1" [(ngModel)]="question.option1">
+
+            <label>Enter Option 2</label>
+            <input type="text" placeholder="Option 2" name="option2" [(ngModel)]="question.option2">
+
+            <label>Enter Option 3</label>
+            <input type="text" placeholder="Option 3" name="option3" [(ngModel)]="question.option3">
+
+            <label>Enter Option 4</label>
+            <input type="text" placeholder="Option 4" name="option4" [(ngModel)]="question.option4">
+
+            <label>Please Enter the correct answer for your question</label>
+            <input type="text" placeholder="Option1" name="answer" [(ngModel)]="question.answer"> <br/><br/>
+
+            <button type="submit">Add Question</button>
+
+        </form>
+    </div>
+</div>

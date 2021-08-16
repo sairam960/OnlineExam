@@ -1,0 +1,73 @@
+
+<div class="navbar">
+    
+</div>
+<div *ngIf="finished==0;else elseBlock">
+<div class="level"> LEVEL {{level_no}}</div>
+<div class="row">
+    <div class="rightcolumn">
+        <div class="card">
+            <div  *ngFor="let ques of questions; index as i" >
+                <div *ngIf="i+1==question_no">
+                    <div style="color:rgb(0, 0, 0);"><b>Question {{question_no}} of {{total_question}} </b></div><br>
+                        <div>
+                            <div><b>{{questions[i].question}} ?</b></div><br>
+                            <div *ngIf="questions[i].option1==ele1[i]; else elseBlock1">
+                                <b>a   </b> <input type="radio" checked name="respone" (click)="option1(i)" style="margin-right: 10px; margin-bottom: 3px; margin-left: 2px;"/>
+                                <label>{{questions[i].option1}}</label><br>
+                            </div>
+                            <ng-template #elseBlock1>
+                                <b>a   </b> <input type="radio" name="respone" (click)="option1(i)"  style="margin-right: 10px; margin-bottom: 3px; margin-left: 2px;">
+                                <label>{{questions[i].option1}}</label><br>
+                            </ng-template>
+
+                            <div *ngIf="questions[i].option2==ele1[i]; else elseBlock2">
+                                <b>b   </b> <input type="radio" checked name="respone" (click)="option2(i)" style="margin-right: 10px; margin-bottom: 3px; margin-left: 2px;"/>
+                                <label>{{questions[i].option2}}</label><br>
+                            </div>
+                            <ng-template #elseBlock2>
+                                <b>b   </b> <input type="radio" name="respone" (click)="option2(i)"  style="margin-right: 10px; margin-bottom: 3px; margin-left: 2px;">
+                                <label>{{questions[i].option2}}</label><br>
+                            </ng-template>
+
+                            <div *ngIf="questions[i].option3==ele1[i]; else elseBlock3">
+                                <b>c   </b> <input type="radio" checked name="respone" (click)="option3(i)" style="margin-right: 10px; margin-bottom: 3px; margin-left: 2px;"/>
+                                <label>{{questions[i].option3}}</label><br>
+                            </div>
+                            <ng-template #elseBlock3>
+                                <b>c   </b> <input type="radio" name="respone" (click)="option3(i)"  style="margin-right: 10px; margin-bottom: 3px; margin-left: 2px;">
+                                <label>{{questions[i].option3}}</label><br>
+                            </ng-template>
+
+                            <div *ngIf="questions[i].option4==ele1[i]; else elseBlock4">
+                                <b>d   </b> <input type="radio" checked name="respone" (click)="option4(i)" style="margin-right: 10px; margin-bottom: 3px; margin-left: 2px;"/>
+                                <label>{{questions[i].option4}}</label><br>
+                            </div>
+                            <ng-template #elseBlock4>
+                                <b>d   </b> <input type="radio" name="respone" (click)="option4(i)"  style="margin-right: 10px; margin-bottom: 3px; margin-left: 2px;">
+                                <label>{{questions[i].option4}}</label><br>
+                            </ng-template>
+                            
+                        </div><br><br>
+                        <div class="buttons">
+                            <button class="btn btn-warning"(click)="counter(i)" style="margin-right: 15px;">Save & Next</button> 
+                            <button class="btn btn-warning"(click)="counter1()" style="margin-right: 10px;">Previous</button> <br><br><br><br>
+                            <button class="btn btn-danger" (click)="finish()" style="margin-right: 5px; float: right;">Finish</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>
+<ng-template #elseBlock>
+    <div class="topnav">
+        <a routerLink=''>Home</a>
+    </div>
+    <h2 style="color: red; text-align: center; padding-top: 50px;">Your Test is Completed,You can now close this window!!</h2>
+
+</ng-template>
+    
+
+

@@ -1,0 +1,32 @@
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .welcome_text{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: blanchedalmond;
+}
+
+.button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: auto;
+    cursor: pointer;
+}
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }

@@ -1,0 +1,115 @@
+<div class="topnav">
+  <a routerLink=''>Home</a>
+  <a routerLink='/user-login'>Login</a>
+  </div>
+
+<div class = "container">  
+    <div class="col-md-3"></div>
+      <div class="col-md-6" id="form">
+              <form #regForm="ngForm" (ngSubmit) = "register(regForm)">
+                <h1>Registration Form</h1>    
+                <br><br>
+
+                <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10"> 
+                <h5>Enter full name<input type="text" placeholder="Full name" class="form-control" name="name" #name ="ngModel" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$" [(ngModel)]="user.name" required></h5>
+                <div *ngIf = "name.invalid && (name.dirty || name.touched)" >
+                <h5> <div *ngIf = "name.errors.pattern" style="color: red" > contain characters</div></h5>
+                <h5> <div class ="c1" *ngIf = "name.errors.required" >Name is required</div></h5>
+                </div> 
+                </div>                                                                
+                <div class="col-md-1"></div>
+                </div>
+               <br>
+
+                <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                <h5> Enter email id<input type="Email" placeholder="Email" class="form-control" name="email" pattern="[a-zA-Z0-9.-]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{3,}"  #email ="ngModel" [(ngModel)]="user.emailId" required></h5>
+                <div *ngIf = "email.invalid && (email.dirty || email.touched)">
+                <h5><div *ngIf = "email.errors.pattern" >Email should be of type xyz@abc.com</div></h5>
+                <h5><div class ="c1" *ngIf = "email.errors.required">Email is required</div></h5>   
+                </div>
+                <br>
+
+                <h5>Enter Password<input type="password" placeholder="Password" class="form-control"  name="password" minlength="8" #password = "ngModel" [(ngModel)]="user.password" required></h5>
+                <div *ngIf = "password.invalid && (password.dirty || password.touched)">
+                <h5><div class="c1" *ngIf = "password.errors.minlength">Password should have minimum 8 characters</div></h5>
+                <h5><div class="c1" *ngIf = "password.errors.required">Password is required</div></h5>
+                </div>
+                 <br>
+
+                <h5>Enter mobile no<input type="mobile" placeholder="Mobile Number" class="form-control" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" name="mobileNo"  #mobileNo = "ngModel" [(ngModel)]="user.mobileNo" required></h5>
+                <div *ngIf = "mobileNo.invalid && (mobileNo.dirty || mobileNo.touched)">
+                <h5><div *ngIf = "mobileNo.errors.pattern">Mobile Number should consist of 10 digits</div></h5>
+                <h5><div class="c1" *ngIf = "mobileNo.errors.required">Mobile Number is required</div></h5>
+                </div>
+                </div>                       
+                <div class="col-md-1"></div>
+                </div>                
+                <br>
+
+                <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                <h5>Enter DOB<input type="date" placeholder="DOB" class="form-control" name="dateOfBirth"  #dateOfBirth = "ngModel" [(ngModel)]="user.dateOfBirth" required></h5>
+                <div *ngIf = "dateOfBirth.invalid && (dateOfBirth.dirty || dateOfBirth.touched)">
+                <h5><div class="c1" *ngIf = "dateOfBirth.errors.required">Date of Birth is required</div></h5>
+                </div>
+                </div>  
+
+                <div class="col-md-6">
+                <h5> Enter year of completion<input type="date" placeholder="Year of completion" class="form-control" #yearOfQualification ="ngModel" name="yearOfQualification"  [(ngModel)]="user.yearOfQualification" required></h5>
+                <div *ngIf = "yearOfQualification.invalid && (yearOfQualification.dirty || yearOfQualification.touched)">
+                <h5><div class="c1" *ngIf = "yearOfQualification.errors.required">Year of completion is required</div></h5>
+                </div>
+                </div>
+                <div class="col-md-1"></div>
+                </div>
+                <br>
+
+                <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                <h5> Enter state<input type="text" placeholder="state" class="form-control" name="state" #state ="ngModel" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$" [(ngModel)]="user.state" required></h5>
+                <div *ngIf = "state.invalid && (state.dirty || state.touched)">
+                <h5><div class ="c1" *ngIf = "state.errors.required">State is required</div></h5>
+                <h5><div *ngIf = "state.errors.pattern">Should contain characters</div></h5>
+                </div>  
+                </div> 
+
+                <div class="col-md-5">
+                <h5> Enter city<input type="text" placeholder="city" class="form-control" name="city" #city ="ngModel"  pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$" [(ngModel)]="user.city" required></h5>
+                <div *ngIf = "city.invalid && (city.dirty || city.touched)">
+                <h5><div class ="c1" *ngIf = "city.errors.required">City is required</div></h5>
+                <h5><div *ngIf = "city.errors.pattern">Should contain characters</div></h5>
+                </div>  
+                </div>                 
+                <div class="col-md-1"></div>
+                </div>
+                <br>
+
+                <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                <h5> Enter Qualification<input type="text" placeholder="qualification" class="form-control" name="qualification" #qualification ="ngModel"  pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$" [(ngModel)]="user.qualification" required></h5>
+                <div *ngIf = "qualification.invalid && (qualification.dirty || qualification.touched)">
+                <h5><div class ="c1" *ngIf = "qualification.errors.required">Qualification is required</div></h5>
+                <h5><div *ngIf = "qualification.errors.pattern">Should contain characters</div></h5>
+                </div> 
+                </div>
+
+                <div class="col-md-1"></div>
+                </div>
+                <br>
+                <div class ="text-center">
+                <input class="btn btn-primary" type="submit" value="Submit">
+                </div>
+                 <br>
+              </form>  
+        </div>   
+  </div>
+
+
+

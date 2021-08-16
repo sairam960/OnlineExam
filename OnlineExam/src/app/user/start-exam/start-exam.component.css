@@ -1,0 +1,59 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+.body{
+    padding:50px;
+    
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Navbar links */
+  .topnav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Links - change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .exam{
+      margin: 30px;
+      text-align: center;
+      width: auto;
+      height: 720px;
+      border: 1px solid black;
+  }
+
+  .instructions{
+      float:left;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-left: 20px;
+      padding-top: 25px;
+      text-align: left;
+  }
+
+  .radio_button{
+      float: left;
+      text-align: center;
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-top:40px;
+      padding-left: 20px;
+  }
+  
+  .exam_button{
+    float: right;
+    text-align: center;     
+    padding-top: 40px;
+    padding-right: 40px;
+  }

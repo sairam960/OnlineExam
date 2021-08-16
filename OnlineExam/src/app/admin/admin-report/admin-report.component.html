@@ -1,0 +1,76 @@
+<div class="navbar">
+    <div class="welcome_text">Welcome, Admin</div>
+    <button class="back" (click)="goBack()">Back</button>
+    <button class="logout" (click)="adminLogout()">Logout</button>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form  class="box">
+
+                    <h1>Search Students</h1>
+                    
+                    <select name="subject" [(ngModel)]="searchInput.subject">
+                        <option value="0">Technology</option>
+                        <option value="Java">Java</option>
+                        <option value="SQL">SQL</option>
+                        <option value="PHP">PHP</option>
+                        <option value="C/C++">C/C++</option>
+                        <option value="Python">Python</option>
+                        <option value="C#/.Net">C#/.Net</option>
+                    </select>
+                    
+                    <input type="text" placeholder="State" name="state" [(ngModel)]="searchInput.state">
+                    <input type="text" placeholder="City" name="city" [(ngModel)]="searchInput.city"> 
+
+                    <select name="level" id="levels" [(ngModel)]="searchInput.level">
+                        <option value="level">Level</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>       
+                    
+                    <button class="loginbtn" (click)="submitDetails()">Search</button>
+                    <button class="loginbtn" (click)="getExamInfo()">Get Report</button>
+                     
+                </form>
+            </div>
+            <hr>
+            <div class="box-result" *ngIf = "detailsArray">
+                <h1>Search Results</h1>
+                <table border="5">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>D.O.B.</th>
+                        <th>Qualification</th>
+                        <th>Year of Completion</th>
+                    </tr>
+                    <tr *ngFor = "let details of detailsArray">
+                        <td>{{ details.name }}</td>
+                        <td>{{ details.emailId}}</td>
+                        <td>{{ details.mobileNo }}</td>
+                        <td>{{ details.city }}</td>
+                        <td>{{ details.state }}</td>
+                        <td>{{ details.dateOfBirth }}</td>
+                        <td>{{ details.qualification }}</td>
+                        <td>{{ details.yearOfCompletion }}</td>
+                    </tr>
+                </table>
+
+                <hr>
+                <h1>Pass/Fail Count</h1>
+
+                Pass : {{ passCount }} <br>
+                Fail : {{failCount }} <br>
+
+                Total Students Appeared Exams in this category : {{ total }}
+            </div>
+            
+        </div>
+    </div>
+</div>

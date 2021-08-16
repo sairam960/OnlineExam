@@ -1,0 +1,23 @@
+<div class="topnav">
+    <a routerLink=''>Home</a>
+   </div>
+   
+  
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form  class="box" (ngSubmit)="login()">
+                    <h1>Test</h1>
+                    <h1>Admin Login</h1>
+                    <p>Enter username and password</p>
+                    
+                    <input type="text" placeholder="Username" name="email" [(ngModel)] = "adlogin.email" required>
+                    <input type="password" placeholder="Password" name="password" [(ngModel)] = "adlogin.password" required> 
+                    <button class="loginbtn">Login</button>
+                     
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

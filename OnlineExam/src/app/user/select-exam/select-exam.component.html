@@ -1,0 +1,14 @@
+<div class="topnav">
+    <a routerLink=''>Home</a>
+    <a routerLink=''>Logout</a>
+</div>
+<p>SELECT EXAM</p>
+<div class="row"> 
+    <div class="card" *ngFor="let sub of subjects" >
+      <button (click)="navigate(sub.id,sub.name)" class="button">
+            <figure ><img src="{{sub.imageUrl}}"></figure>
+            <div class="text" name="subject">{{sub.name}}</div>
+      </button>
+    </div>
+    
+</div>

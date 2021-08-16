@@ -1,0 +1,97 @@
+<div class="navbar">
+    <div class="welcome_text">Welcome, Admin</div>
+    <button class="back" (click)="goBack()">Back</button>
+    <button class="logout" (click)="adminLogout()">Logout</button>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form  class="box" >
+                    <h1>Remove Question</h1>
+
+                    <form>
+                        <p>Select the subject whose questions to be displayed :</p>
+                        <select name="subject" [(ngModel)]="searchInput.subject">
+                            <option value="0">Technology</option>
+                            <option value="Java">Java</option>
+                            <option value="SQL">SQL</option>
+                            <option value="PHP">PHP</option>
+                            <option value="C/C++">C/C++</option>
+                            <option value="Python">Python</option>
+                            <option value="C#/.Net">C#/.Net</option>
+                        </select>
+
+                        <button class="loginbtn" (click)="getQuestion()">Get Question</button>
+                    </form>
+                    
+                    <h1>Search Results</h1>
+
+                    <table>
+                        <tr>
+                            <th>Question ID</th>
+                            <th>Level</th>
+                            <th>Question</th>
+                            <th>Option 1</th>
+                            <th>Option 2</th>
+                            <th>Option 3</th>
+                            <th>Option 4</th>
+                            <th>Correct Option</th>
+                            <th>Status</th>
+                            <th>Delete Option</th>
+                        </tr>
+
+                        <tr *ngFor = "let detail of details">
+                            <td>{{ detail.questionId }}</td>
+                            <td>{{ detail.level }}</td>
+                            <td>{{ detail.question }}</td>
+                            <td>{{ detail.option1 }}</td>
+                            <td>{{ detail.option2 }}</td>
+                            <td>{{ detail.option3 }}</td>
+                            <td>{{ detail.option4 }}</td>
+                            <td>{{ detail.answer }}</td>
+                            <td>{{ detail.status }}</td>
+                            <td><button (click)="deleteQuestion(detail.questionId)" *ngIf = "detail.questionId">Delete</button></td>
+                        </tr>
+                    </table>
+
+                    <hr>
+
+                    <button type="button" class="loginbtn" (click)="getDeletedQuestion()">Get Deleted Question</button>
+
+                    <h1>Deleted questions</h1>
+
+                    <table>
+                        <tr>
+                            <th>Question ID</th>
+                            <th>Level</th>
+                            <th>Question</th>
+                            <th>Option 1</th>
+                            <th>Option 2</th>
+                            <th>Option 3</th>
+                            <th>Option 4</th>
+                            <th>Correct Option</th>
+                            <th>Status</th>
+                            <th>Activate</th>
+                        </tr>
+
+                        <tr *ngFor = "let detail of detailsDelete">
+                            <td>{{ detail.questionId }}</td>
+                            <td>{{ detail.level }}</td>
+                            <td>{{ detail.question }}</td>
+                            <td>{{ detail.option1 }}</td>
+                            <td>{{ detail.option2 }}</td>
+                            <td>{{ detail.option3 }}</td>
+                            <td>{{ detail.option4 }}</td>
+                            <td>{{ detail.answer }}</td>
+                            <td>{{ detail.status }}</td>
+                            <td><button (click)="activateQuestion(detail.questionId)" *ngIf = "detail.questionId">Activate</button></td>
+                        </tr>
+                    </table>
+                     
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

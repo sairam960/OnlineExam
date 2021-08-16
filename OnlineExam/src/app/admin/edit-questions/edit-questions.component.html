@@ -1,0 +1,76 @@
+<div class="navbar">
+    <div class="welcome_text">Welcome, Admin</div>
+    <button class="back" (click)="goBack()">Back</button>
+    <button class="logout" (click)="adminLogout()">Logout</button>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form  class="box" >
+        
+                    <h1>Edit Question</h1>
+
+                    <hr>
+
+                    <p>Question ID : {{ quesId.questionId }}</p>
+                    <p>Question : {{ detail.question }}</p> 
+                    <input type="text" name="question" placeholder="New Question" [(ngModel)]=question required> 
+                    <button type="button" (click)="newQuestion()">Save Changes</button>
+
+                    <hr>
+
+                    <p>Level : {{ detail.level }}</p>
+                    <p>Change Level : </p>
+                    <select name="level" id="levels" [(ngModel)]="level" required>
+                        <option value="level">Level</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select> 
+                    <button type="button" (click)="newLevel()" >Save Changes</button>
+
+                    <hr>
+
+                    <p>Option 1 : {{ detail.option1 }}</p>
+                    <input type="text" name="option1" placeholder="Edit Option 1" [(ngModel)]="option1" required> 
+                    <button type="button" (click)="newOption1()" >Save Changes</button>
+
+                    <hr>
+
+                    <p>Option 2 : {{ detail.option2 }}</p>
+                    <input type="text" name="option2" placeholder="Edit Option 2" [(ngModel)]="option2" required> 
+                    <button type="button" (click)="newOption2()">Save Changes</button>
+
+                    <hr>
+
+                    <p>Option 3 : {{ detail.option3 }}</p>
+                    <input type="text" name="option3" placeholder="Edit Option 3" [(ngModel)]="option3" required> 
+                    <button type="button" (click)="newOption3()" >Save Changes</button>
+
+                    <hr>
+
+                    <p>Option 4 : {{ detail.option1 }}</p>
+                    <input type="text" name="option4" placeholder="Edit Option 4" [(ngModel)]="option4" required> 
+                    <button type="button" (click)="newOption4()" >Save Changes</button>
+
+                    <hr>
+
+                    <p>Change Answer : {{ detail.answer }}</p>
+                    <select name="answer" id="answer" [(ngModel)]="answer" required>
+                        <option value="ans">Answer</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                        <option value="option4">Option 4</option>
+                    </select> 
+                    <button type="button" (click)="newAnswer()" >Save Changes</button>
+
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

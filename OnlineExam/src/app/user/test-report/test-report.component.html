@@ -1,0 +1,17 @@
+<div class="topnav">
+    <a routerLink=''>Logout</a>
+</div>
+<div class="body">
+    <div class="test-report">
+        <h2 style="text-align: center;">Test-Report</h2>
+        <h3>Message: {{message}}</h3>
+        <h3>Score:{{score}}</h3>
+        <h3>Level:{{level}}</h3>
+        <h3>Subject:{{subject}}</h3>
+        <div class="piechart">
+        <google-chart  #chart [title]="title" [type]="type" [data]="data1" [options]="options" [width]="width"
+            [height]="height">
+        </google-chart>
+        </div>
+    </div>
+</div>

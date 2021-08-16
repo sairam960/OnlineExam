@@ -1,0 +1,41 @@
+<div class="topnav">
+    <a routerLink=''>Logout</a>
+</div>
+<div class="body">
+    <div class="exam">
+        <h3><b>Instructions for Technical Test</b></h3>
+        <div class="instructions">
+            The clock will be at the server. The countdown timer at the right corner of the screen 
+            will display the remaining time available for you to complete the examination.
+            When the timer reaches zero the examination ends by itself. You need to terminate the examination or submit the paper. 
+            <br><br>
+            The question palette displayed on the right side of the screen will show the status of each question.
+            <br><br>
+            <p style="color: red; font-weight: bold;" >Navigating to a Question</p>
+            To navigate to a Question:<br>
+            Select an answer from the 4 options available and click on <b>Next</b> to go to next question.<br>
+            You can revisit previous questions by <b>Previous</b> button.<br>
+            Click on <b>Finish</b> to finish your test.
+            <br><br>
+            <p style="color: red; font-weight: bold;">Answering a Question</p>
+            To select your answer, click on the button of one of the options.<br>
+            To deselect your answer, click on the button of chosen option again.<br>
+            To change your chosen answer, click on the button of another option.<br>
+            To save your answer, you must click on <b>Save & Next</b> button.
+            <br><br>
+            <p style="color: red; font-weight: bold;">Weightage of Questions</p>
+            This paper consists a total of <b>10 questions</b>.<br>
+            Each question is of <b>1 mark</b> and Weightage of paper is for <b>10 marks</b>.<br>
+            For each right answer you are given <b>1 mark</b> and there are <b>no negative marks</b> for the wrong answers.<br>
+            <b>No marks</b> are awareded for the un-answered questions.
+            <br><br>
+            <p style="color: red; font-weight: bold;">Declaration</p>
+            I have read and understood all the above mentioned instructions. Also, I confirm that at the start of the examination all the computer hardware and internet connection are in proper working condition.
+
+        </div>
+            
+            <div class=exam_button>
+                <button class="btn btn-success" (click)="start()" >Start Exam</button>
+            </div>
+    </div>
+</div>

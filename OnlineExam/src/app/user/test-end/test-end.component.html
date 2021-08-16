@@ -1,0 +1,25 @@
+<div class="topnav">
+    <a routerLink=''>Logout</a>
+</div>
+<div class="body">
+    <div class="test-end">
+        <h2>Thank You For taking the test</h2><br>
+        <div class="btn1" *ngIf="marks>=10; else elseBlock">
+            <h3>You can Proceed to level {{level}}</h3><br>
+            <div class="btn2">
+                <button (click)="report()" class="btn btn-success">Get Report</button>
+            </div>
+            <div class="btn3">
+                <button (click)="start1()" class="btn btn-success">Level {{level}}</button>
+            </div>
+        </div>
+        <ng-template #elseBlock>
+            <div class="btn2">
+                <button (click)="report()" class="btn btn-success">Get Report</button>
+            </div>
+            <div class="btn3">
+                <input type="button" id="Retest" name="Retest" value="Retest" (click)="start()" class="btn btn-success" >
+            </div>
+        </ng-template>
+    </div>
+</div>

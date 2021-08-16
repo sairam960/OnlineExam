@@ -1,0 +1,35 @@
+<div class="topnav">
+    <a routerLink=''>Home</a>
+    <a routerLink=''>Logout</a>
+</div>
+<div class="card">
+    <div class="table-responsive" style="font-size: 18px;text-align: center;">
+        <table class="table">
+            <thead>
+                <tr class="bg-light">
+                    <th>User Name</th>
+                    <th>Exam Id</th>
+                    <th>Subject Name</th>
+                    <th>Date of Exam</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Level</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let res of result; index as i">
+                    <td style="padding-bottom: 3px;">{{this.user.name}}</td>
+                    <td style="padding-bottom: 3px;">{{result[i].examId}}</td>
+                    <td style="padding-bottom: 3px;">{{result[i].subject.name}}</td>
+                    <td style="padding-bottom: 3px;">{{result[i].startTime | date:"dd/MM/yy"}}</td>
+                    <td style="padding-bottom: 3px;">{{result[i].startTime | date:"HH:mm:ss"}}</td>
+                    <td style="padding-bottom: 3px;">{{result[i].endTime | date:"HH:mm:ss"}}</td>
+                    <td style="padding-bottom: 3px;">{{result[i].level}}</td>
+                    <td style="padding-bottom: 3px;">{{result[i].marks}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

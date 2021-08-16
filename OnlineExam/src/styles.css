@@ -1,0 +1,14 @@
+@import   url('https://unpkg.com/bootstrap/dist/css/bootstrap.min.css');
+
+
+.footer {
+    text-align: center;
+    position: fixed;
+    color: honeydew;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* margin: 20px; */
+    padding: 12px;
+    background-color: grey;
+ }
