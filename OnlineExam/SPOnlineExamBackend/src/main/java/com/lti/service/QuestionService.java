@@ -32,4 +32,13 @@ public class QuestionService {
 			return null;
 		}
 	}
+	
+	public String updateStatusOfQuestion(int id) {
+		
+		if(questionRepository.updateQuestionStatus(id)) {
+			return "Status Updated";
+		} else {
+			return "Status not updated";
+		}
+	}
 }

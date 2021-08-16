@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
@@ -41,6 +42,10 @@ public class QuestionController {
 			return null;
 		}	
 		
+	}
+	@GetMapping("/editStatus")
+	public String status(@RequestParam("id") int id) {
+		return questionService.updateStatusOfQuestion(id);
 	}
 
 	public LocalDateTime getStartTime() {

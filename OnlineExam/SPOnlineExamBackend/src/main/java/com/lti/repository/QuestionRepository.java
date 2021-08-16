@@ -15,6 +15,15 @@ public class QuestionRepository  {
 	
 	@PersistenceContext
 	private EntityManager entityManager;
+	
+	public boolean updateQuestionStatus(int id) {
+		
+		return entityManager
+				.createQuery("UPDATE Question q SET q.status = :stat WHERE q.questionId = :id")
+				.setParameter("stat", "Active")
+				.setParameter("id", id)
+				.executeUpdate() == 1 ? true:false;
+	}
 
 	public boolean isQuestionPresent(String question) {
 		return (Long)
