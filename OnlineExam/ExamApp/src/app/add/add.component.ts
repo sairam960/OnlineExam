@@ -63,9 +63,7 @@ export class AddComponent implements OnInit {
 
   addQuestion()
   {
-    this.sub.subjectId=this.subjectId;
-    this.sub.name=this.SubjectName;
-    this.ques.sub=this.sub;
+   
     this.csvRecords.forEach(element => {this.ques=element;
       
       

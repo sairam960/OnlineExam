@@ -37,10 +37,12 @@ public class Questions {
 	@Column(name="ans")
 	private String ans;
 	
-	@ManyToOne
-	//@JsonIgnore
-	@JoinColumn(name="subjectId")
-	private Subject subject;
+	@Column(name="subjectId")
+	private int subjectId;
+	
+	@Column(name="subjectName")
+	private int subjectName;
+	
 
 	public int getQuesid() {
 		return quesid;
@@ -111,16 +113,24 @@ public class Questions {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Subject getSubject() {
-		return subject;
+	public int getSubjectId() {
+		return subjectId;
 	}
 
-	public void setSubject(Subject subject) {
-		this.subject = subject;
+	public void setSubjectId(int subjectId) {
+		this.subjectId = subjectId;
+	}
+
+	public int getSubjectName() {
+		return subjectName;
+	}
+
+	public void setSubjectName(int subjectName) {
+		this.subjectName = subjectName;
 	}
 
 	public Questions(int quesid, int lvl, String question, String op1, String op2, String op3, String op4, String ans,
-			Subject subject) {
+			int subjectId, int subjectName) {
 		super();
 		this.quesid = quesid;
 		this.lvl = lvl;
@@ -130,7 +140,8 @@ public class Questions {
 		this.op3 = op3;
 		this.op4 = op4;
 		this.ans = ans;
-		this.subject = subject;
+		this.subjectId = subjectId;
+		this.subjectName = subjectName;
 	}
 
 	
