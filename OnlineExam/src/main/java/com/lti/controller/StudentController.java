@@ -1,10 +1,13 @@
 package com.lti.controller;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +31,7 @@ public class StudentController {
 	}
 	
 	@PostMapping("/students")
-	public boolean addStudent(@RequestBody StudentData student) throws Exception {
+	public boolean addStudent(@RequestBody StudentData student,@PathVariable("date") String dateb) throws Exception {      		//Add date of birth as path variable
 		
 		String tempEmail = student.getEmail();
 		if(tempEmail != null && !"".equals(tempEmail)) {
@@ -37,6 +40,9 @@ public class StudentController {
 				throw new Exception("Student with "+tempEmail+" already exists try Logging in!");
 			}
 		}
+		DateTimeFormatter formatter=DateTimeFormatter.ofPattern("dd/MM/yyyy"); 
+		//LocalDateTime newdate=LocalDateTime.
+		System.out.println("Dob in controller is student "+ student.getDateOfBirth());
 		return studser.addStudent(student);
 	}
 	

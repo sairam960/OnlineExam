@@ -34,7 +34,7 @@ public class StudentData {
 	private long mobile;
 	
 	@Column(name="dob")
-	private Date dateOfBirth;
+	private LocalDate dateOfBirth;
 	
 	@Column(name="city")
 	private String city;
@@ -51,7 +51,7 @@ public class StudentData {
 	public StudentData() {
 		super();
 	}
-	public StudentData(int studentId, String name, String email, String password, long mobile, Date dateOfBirth,
+	public StudentData(int studentId, String name, String email, String password, long mobile, LocalDate dateOfBirth,
 			String city, String state, String qualification, Date yearOfCompletion, int studentid) {
 		super();
 		this.studentid = studentid;
@@ -95,10 +95,10 @@ public class StudentData {
 	public void setMobile(long mobile) {
 		this.mobile = mobile;
 	}
-	public Date getDateOfBirth() {
+	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 	public String getCity() {

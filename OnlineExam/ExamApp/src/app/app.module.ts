@@ -21,6 +21,7 @@ import { StudentdashboardComponent } from './studentdashboard/studentdashboard.c
 import { QuestionsComponent } from './questions/questions.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ErrorComponent } from './error/error.component';
+import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ErrorComponent } from './error/error.component';
     AppRoutingModule,
     NgxCsvParserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    [NgbModule]
   ],
   providers: [],
   bootstrap: [AppComponent]
