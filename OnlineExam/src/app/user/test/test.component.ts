@@ -34,6 +34,7 @@ export class TestComponent {
   ele1: any = [];
   finished: any = 0;
 
+
   examId: number;
   res: Response[] = [];
 
@@ -43,8 +44,9 @@ export class TestComponent {
 
 
   ngOnInit(): void {
-  
+
     this.getQuestionDetails();
+
   }
 
 
@@ -53,7 +55,7 @@ export class TestComponent {
     this.s.subjectId = +sessionStorage.getItem('subjectId');
     this.e.subject.subjectId = this.s.subjectId;
     this.e.user.userId = +sessionStorage.getItem('userId');
-    this.e.level = 1;
+    this.e.level =1;
     this.service.getQuestions(this.s).subscribe(response => {
 
       this.result = response;

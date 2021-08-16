@@ -4,7 +4,6 @@ import { AddQuestionComponent } from './admin/add-question/add-question.componen
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
 import { AdminReportComponent } from './admin/admin-report/admin-report.component';
-import { EditQuestionsComponent } from './admin/edit-questions/edit-questions.component';
 import { RemoveQuestionComponent } from './admin/remove-question/remove-question.component';
 import { ForgotPasswordComponent } from './user/forgot-password/forgot-password.component';
 import { HomePageComponent } from './user/home-page/home-page.component';
@@ -33,11 +32,10 @@ const routes: Routes = [
   {path:'test-report',component:TestReportComponent},
   {path:'start-exam',component:StartExamComponent},
   {path:'add-question',component:AddQuestionComponent},
-  {path:'test-end',component:TestEndComponent},
+  {path:'test-start/test-end',component:TestEndComponent},
   {path:'admin-profile',component:AdminProfileComponent},
   {path:'remove-questions',component:RemoveQuestionComponent},
   {path:'admin-report',component:AdminReportComponent},
-  {path:'edit-question', component:EditQuestionsComponent},
   {path:'user-report',component:UserReportComponent}
 ];
 

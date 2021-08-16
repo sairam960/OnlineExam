@@ -6,7 +6,6 @@ import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { RemoveQuestionComponent } from './remove-question/remove-question.component';
 import { AdminReportComponent } from './admin-report/admin-report.component';
-import { EditQuestionsComponent } from './edit-questions/edit-questions.component';
 
 
 
@@ -20,6 +19,6 @@ import { EditQuestionsComponent } from './edit-questions/edit-questions.componen
   exports:[
    AdminLoginComponent
   ],
-  declarations: [AdminLoginComponent, AdminProfileComponent, AddQuestionComponent, RemoveQuestionComponent, AdminReportComponent, EditQuestionsComponent]
+  declarations: [AdminLoginComponent, AdminProfileComponent, AddQuestionComponent, RemoveQuestionComponent, AdminReportComponent]
 })
 export class AdminModule { }

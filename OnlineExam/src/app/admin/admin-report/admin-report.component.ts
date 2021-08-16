@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminReportService } from 'src/app/appmodel/admin-report.service';
 import { AdminService } from '../admin.service';
-import { GoogleChartsModule } from 'angular-google-charts';
 
 
 @Component({

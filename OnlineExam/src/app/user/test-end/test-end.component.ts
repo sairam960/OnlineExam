@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { element } from 'protractor';
 
 @Component({
   selector: 'app-test-end',
@@ -11,7 +10,6 @@ export class TestEndComponent implements OnInit {
 
   correct:number;
   level:number=1;
-  retests:number=0;
   marks:number;
 
 
@@ -35,19 +33,8 @@ export class TestEndComponent implements OnInit {
   }
 
   start(){
-    if(this.retests==0){
-      alert("You should wait atleast 5 seconds for Retest");
-      var element = <HTMLInputElement> document.getElementsByName("Retest")[0] ;
-      element.disabled = true;
-      setTimeout(function(){  
-        alert("You can take your Retest now");
-        element.disabled = false; 
-    },6000);
-      this.retests=1;
-    }
-    else{
-      this.retests=0;
-    this.router.navigateByUrl('start-exam');}
+    
+    this.router.navigateByUrl('start-exam');
   }
 
   start1(){

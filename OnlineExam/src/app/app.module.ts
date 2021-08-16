@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { AdminModule } from './admin/admin.module';
 import { HttpClientModule } from '@angular/common/http';  
 import { SharedServiceService } from './shared-service.service';
-import { GoogleChartsModule } from 'angular-google-charts';
 
 
 
@@ -22,9 +21,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
     UserModule,
     AdminModule,
     FormsModule,
-    HttpClientModule,
-    GoogleChartsModule,
-    
+    HttpClientModule
   ],
   providers: [SharedServiceService],
   bootstrap: [AppComponent]

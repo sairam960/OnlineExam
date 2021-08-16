@@ -13,8 +13,8 @@
                         <div>
                             <div><b>{{questions[i].question}} ?</b></div><br>
                             <div *ngIf="questions[i].option1==ele1[i]; else elseBlock1">
-                                <b>a   </b> <input type="radio" checked name="respone" (click)="option1(i)" style="margin-right: 10px; margin-bottom: 3px; margin-left: 2px;"/>
-                                <label>{{questions[i].option1}}</label><br>
+                                <!-- <b>a   </b> <input type="radio" checked name="respone" (click)="option1(i)" style="margin-right: 10px; margin-bottom: 3px; margin-left: 2px;"/>
+                                <label>{{questions[i].option1}} </label><br> -->
                             </div>
                             <ng-template #elseBlock1>
                                 <b>a   </b> <input type="radio" name="respone" (click)="option1(i)"  style="margin-right: 10px; margin-bottom: 3px; margin-left: 2px;">
@@ -63,7 +63,7 @@
 </div>
 <ng-template #elseBlock>
     <div class="topnav">
-        <a routerLink=''>Home</a>
+        <a routerLink='test-end'>Next</a>
     </div>
     <h2 style="color: red; text-align: center; padding-top: 50px;">Your Test is Completed,You can now close this window!!</h2>
 

@@ -54,7 +54,7 @@ export class AddQuestionComponent {
       this.question.answer=element.answer;
       console.log(this.question)
       this.adminService.addQuestion(this.question).subscribe(response=>{
-        alert(JSON.stringify(response));
+        console.log(JSON.stringify(response));
     })
     });
       //this.adminService.addQuestion(this.question).subscribe(response=>{
