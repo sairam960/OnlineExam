@@ -1,11 +1,9 @@
 package com.lti.service;
-import java.util.Base64;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.lti.entity.User;
 import com.lti.exception.UserServiceException;
@@ -24,7 +22,8 @@ public class UserService {
 		if(userRepository.isUserPresent(user.getEmailId()))
 			throw new UserServiceException("User already registerted");
 		else {
-				User updatedUser =(User) userRepository.save(user);
+				User updatedUser = (User) 
+				userRepository.save(user);
 				return updatedUser.getUserId();
 			}
 		

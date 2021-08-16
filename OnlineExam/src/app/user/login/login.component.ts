@@ -24,7 +24,7 @@ export class LoginComponent
     console.log(this.login.password);
     this.userService.login(this.login).subscribe(response=>{
      
-     // alert(JSON.stringify(response));
+      
       if(response.status== true){
         let userId=response.userId;
         let userName=response.name;

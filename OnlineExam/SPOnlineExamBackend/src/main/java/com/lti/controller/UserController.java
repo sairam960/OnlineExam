@@ -22,7 +22,6 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-
 	
 	@PostMapping("/register")
 	public RegisterStatus register(@RequestBody User user){
@@ -52,7 +51,6 @@ public class UserController {
 			loginStatus.setMessage("Login Successfull!!");
 			loginStatus.setUserId(user.getUserId());
 			loginStatus.setName(user.getName());
-			
 			return loginStatus;
 		}
 		catch(UserServiceException e){
@@ -63,7 +61,6 @@ public class UserController {
 			return loginStatus;
 		}
 	}   
-	
 	
 	
 }

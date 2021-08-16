@@ -7,9 +7,7 @@ import { LoggedInUser } from './appmodel/LoggedInUser';
 import { Sub } from './appmodel/Sub';
 import { Exam } from './appmodel/Exam';
 import { Response } from './appmodel/Response';
-import { Password } from './appmodel/Password';
-
-
+// import { Password } from './appmodel/Password';
 
 
 @Injectable({
@@ -67,10 +65,10 @@ export class UserService {
     return this.http.get(url);
   }
 
-  changePassword(password:Password):Observable<any>{
-    let url="http://localhost:8181/changepassword";
-    return this.http.post(url,password);
-  }
+  // changePassword(password:Password):Observable<any>{
+  //   let url="http://localhost:8181/changepassword";
+  //   return this.http.post(url,password);
+  // }
 
 
 }

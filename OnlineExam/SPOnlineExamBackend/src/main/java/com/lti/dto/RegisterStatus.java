@@ -12,6 +12,4 @@ public class RegisterStatus extends Status {
 	}
 
 	
-	
-
 }

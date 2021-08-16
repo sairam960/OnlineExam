@@ -18,6 +18,10 @@ public class UserRepository {
 				.getSingleResult() == 1 ? true:false;
 	}
 	
+	public Object save(Object obj) {
+		Object updatedObj = entityManager.merge(obj);
+		return updatedObj;
+	}
 	
 	public int fetchIdByEmailAndPassword(String email,String password) {
 		
@@ -29,33 +33,18 @@ public class UserRepository {
 				.getSingleResult();
 	}
 	
-	public String fetchByEmail(String email) {
-		return (String)
-				entityManager
-				.createQuery("select user.password from User user where user.emailId=: em")
-				.setParameter("em",email)
-				.getSingleResult();
-	}
-	
-
 	public <E> E fetch(Class<E> cl, Object pk) {
 		E e = entityManager.find(cl, pk);
 		return e;
 	}
 	
+//	public String fetchByEmail(String email) {
+//		return (String)
+//				entityManager
+//				.createQuery("select user.password from User user where user.emailId=: em")
+//				.setParameter("em",email)
+//				.getSingleResult();
+//	}	
 
-	public Object save(Object obj) {
-		Object updatedObj = entityManager.merge(obj);
-		return updatedObj;
-	}
-	
-	public int changePassword(String password) {
-		
-		int rowsUpdated = entityManager
-		.createQuery("update User user set user.password =: pass")
-		.setParameter("pass",password)
-		.executeUpdate();
-		
-		return rowsUpdated;
-	}
+
 }

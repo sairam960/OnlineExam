@@ -13,15 +13,15 @@ export class RegisterComponent  {
 
 user : User = new User(); 
 
-constructor(private service: UserService) { }
+constructor(private service: UserService, private router: Router ) { }
 
 register(f:NgForm) {
 
   if(f.valid)
   {
    this.service.registerUser(this.user).subscribe(response => {
-       //alert(JSON.stringify(this.user));
-       alert("User registered successfully");
+       alert("User registered successfully! Please Proceed to login");
+       this.router.navigate(['/user-login']);
   })
 }
 else {
