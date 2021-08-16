@@ -17,23 +17,13 @@
                 <option> 2</option>
                 <option> 3</option>
             </select><br/><br/>
-            <label>Enter Question</label>
-            <input type="text" placeholder="Question" name="question" [(ngModel)]="question.question">
+             
+            <div class="csv-file-chooser-section">
 
-            <label>Enter Option 1</label>
-            <input type="text" placeholder="Option 1" name="option1" [(ngModel)]="question.option1">
-
-            <label>Enter Option 2</label>
-            <input type="text" placeholder="Option 2" name="option2" [(ngModel)]="question.option2">
-
-            <label>Enter Option 3</label>
-            <input type="text" placeholder="Option 3" name="option3" [(ngModel)]="question.option3">
-
-            <label>Enter Option 4</label>
-            <input type="text" placeholder="Option 4" name="option4" [(ngModel)]="question.option4">
-
-            <label>Please Enter the correct answer for your question</label>
-            <input type="text" placeholder="Option1" name="answer" [(ngModel)]="question.answer"> <br/><br/>
+                <input type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
+                accept=".csv" />
+            
+            </div><br/><br/>
 
             <button type="submit">Add Question</button>
 
