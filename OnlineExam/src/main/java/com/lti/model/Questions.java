@@ -41,7 +41,7 @@ public class Questions {
 	private int subjectId;
 	
 	@Column(name="subjectName")
-	private int subjectName;
+	private String subjectName;
 	
 
 	public int getQuesid() {
@@ -121,16 +121,16 @@ public class Questions {
 		this.subjectId = subjectId;
 	}
 
-	public int getSubjectName() {
+	public String getSubjectName() {
 		return subjectName;
 	}
 
-	public void setSubjectName(int subjectName) {
+	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
 
 	public Questions(int quesid, int lvl, String question, String op1, String op2, String op3, String op4, String ans,
-			int subjectId, int subjectName) {
+			int subjectId, String subjectName) {
 		super();
 		this.quesid = quesid;
 		this.lvl = lvl;

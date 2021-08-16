@@ -25,7 +25,6 @@ public class QuestionServiceImpl implements QuestionService {
 	@Override
 	public boolean addQuestions(Questions questions) {
 		
-		System.out.println(questions.getSubject().getSubjectName());
 		//questions.getSubject().getSubjectId();
 		//int subjectId=QuestionsRepository.getSubjectId(subjectName);
 		
