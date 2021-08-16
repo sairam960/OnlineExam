@@ -1,67 +1,4 @@
 
-.box {
-    width: 500px;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background: #ffffff;
-    text-align: center;
-    margin-top: 100px
-}
-
-.box input[type="text"],
-.box input[type="password"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #000000;
-    padding: 10px 10px;
-    width: 250px;
-    outline: none;
-    color: rgb(0, 0, 0);
-}
-
-.box h1 {
-    color: rgb(0, 0, 0);
-    text-transform: uppercase;
-    font-weight: 500
-}
-
-
-.box input[type="submit"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #000000;
-    padding: 14px 40px;
-    outline: none;
-    color: rgb(0, 0, 0);
-    cursor: pointer
-}
-
-
-.box p {
-    color: #000000;
-}
-
-.loginbtn{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #000000;
-    padding: 14px 40px;
-    outline: none;
-    color: rgb(0, 0, 0);
-    cursor: pointer
-}
-
 .topnav {
     overflow: hidden;
     background-color: grey;
@@ -83,6 +20,33 @@
     background-color: black;
     color:honeydew;
   }
+   
 
+  .body{
+    text-align: center;
+    font-size: large;
+  }
+  
+  #container{
+    border: solid;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  
+  button{
+    width: 20%;
+    padding: 10px;
+    color: honeydew;
+    background-color: cadetblue;
+    
+  }
+
+  #page{
+    padding: 165px;
+    background-image: url('/assets/images/register.jpg'); 
+    height: 100%;
+    background-position: center;
+    background-size:cover; 
+  }
 
 
