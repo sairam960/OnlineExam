@@ -11,33 +11,8 @@ import { Subject } from '../subject';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
-  SubjectName:string='';
-  level:number=0;
+ 
   
-  subjectId:number=0;
-  
-  selectChangeHandler(event:any)
-  {
-    this.SubjectName=event.target.value;
-    if(this.SubjectName=="Angular")
-    {
-      this.subjectId=100;
-    }
-    else if(this.SubjectName=="DBMS")
-    {
-       this.subjectId=200;
-    }
-    else if(this.SubjectName=="Java")
-    {
-       this.subjectId=300;
-    }
-    else 
-    this.subjectId=400;
-  }
-  selectChangesHandler(event:any)
-  {
-    this.level=event.target.value;
-  }
   csvRecords: any[] = [];
   header: boolean = true;
 
