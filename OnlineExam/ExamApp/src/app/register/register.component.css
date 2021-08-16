@@ -62,9 +62,10 @@ li a:hover {
   }
 
   #body{
-    padding: 20px;
+    padding: 16px;
     background-image: url('/assets/register.jpg'); 
     height: 100%;
     background-position: center;
     background-size:auto; 
+    margin: 0px;
  }
