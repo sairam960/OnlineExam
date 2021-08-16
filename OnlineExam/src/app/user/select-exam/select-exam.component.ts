@@ -1,8 +1,8 @@
 import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subject } from 'src/app/appmodel/Subject';
-import { UserService } from 'src/app/user.service';
+import { Subject } from '../../appmodel/Subject';
+import { UserService } from '../../user.service';
 
 @Component({
   selector: 'app-select-exam',
