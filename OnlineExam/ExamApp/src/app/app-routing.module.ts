@@ -36,7 +36,6 @@ const routes: Routes = [
   {
     path: 'addComponent', component:AddComponent
   },
-
   {
     path: 'notclear',component:NotClearComponent
   },

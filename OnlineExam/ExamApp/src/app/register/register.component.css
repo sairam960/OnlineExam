@@ -9,8 +9,8 @@ table{
 #container{
   /* border: 20px; */
   border: solid;
-  margin-left: 500px;
-  margin-right: 500px;
+  margin-left: 450px;
+  margin-right: 450px;
 }
 
 h2{
@@ -62,9 +62,9 @@ li a:hover {
   }
 
   #body{
-    padding: 16px;
+    padding: 20px;
     background-image: url('/assets/register.jpg'); 
     height: 100%;
     background-position: center;
-    background-size:cover; 
+    background-size:auto; 
  }
