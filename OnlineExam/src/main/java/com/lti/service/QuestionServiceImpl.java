@@ -24,20 +24,13 @@ public class QuestionServiceImpl implements QuestionService {
 
 	@Override
 	public boolean addQuestions(Questions questions) {
-		String subjectName="Java";
-				//questions.getSubject().getSubjectName();
-		int subjectId=101;
+		
+		System.out.println(questions.getSubject().getSubjectName());
 		//questions.getSubject().getSubjectId();
 		//int subjectId=QuestionsRepository.getSubjectId(subjectName);
 		
-		System.out.println(subjectName);
-	
-		Subject subject=new Subject();
-		subject.setSubjectId(subjectId);
-		subject.setSubjectName(subjectName);
-		questions.setSubject(subject);
+		
 		quesrepo.save(questions);
-		subrepo.save(subject);
 		return true;
 	}
 

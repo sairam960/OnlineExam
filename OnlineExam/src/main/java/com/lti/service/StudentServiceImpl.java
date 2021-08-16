@@ -1,5 +1,7 @@
 package com.lti.service;
 
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -24,6 +26,9 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public boolean addStudent(StudentData student) {
+		
+		System.out.println(student.getDateOfBirth());
+		//student.setDateOfBirth(date);
 		studRepo.save(student);
 		return true;
 	}

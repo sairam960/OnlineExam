@@ -20,7 +20,7 @@ public class Response {
 	private String correct;
 	
 	@OneToOne
-	@JoinColumn(name="studentId")
+	@JoinColumn(name="studentid")
 	private StudentData stud;
 	@ManyToOne
 	@JoinColumn(name="subjectId")

@@ -14,7 +14,7 @@ export class StudentdataService {
 
   //adding new student
   addNewStudent(student:StudentData){
-    return this.httpClient.post(this.baseUrl+"/students",student)
+    return this.httpClient.post(this.baseUrl+"/students/{student.dob}",student)
   }
 
   //check login 

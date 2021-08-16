@@ -35,11 +35,11 @@
 
             <tr>
                 <td><label for="password">Password</label></td>
-                <td><input type="password" name="password" [(ngModel)]="stud.password" #up="ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"></td>
+                <td><input type="password" name="password" [(ngModel)]="stud.password" #up="ngModel" required minlength="6"></td>
             </tr>
             <div *ngIf="up.invalid && (up.dirty||up.touched)" style="color: red;" >
                 <div *ngIf="up.errors?.required">*Password is required</div>
-                <div *ngIf="up.errors?.pattern">*Password must be of Strong</div>
+                <div *ngIf="up.errors?.minlength">*Password must minimum of 6 characters</div>
             </div>
 
             <tr>
@@ -69,8 +69,9 @@
 
             <tr>
                 <td><label for="dob">Date of Birth</label></td>
-                <td><input type="date" #ud="ngModel" name="dob" [(ngModel)]="stud.dob" required></td>
+                <td><input type="date" #ud="ngModel" name="dob" [(ngModel)]="date" required placeholder="yyyy-mm-dd" ngbDatepicker #d="ngbDatepicker"></td>
             </tr>
+            {{stud.dob}}
             <div *ngIf="ud.invalid && (ud.dirty||ud.touched)" style="color: red;" >
                 <div *ngIf="ud.errors?.required">*Date of Birth is required</div>
             </div>
@@ -96,7 +97,7 @@
             </tr> -->
         </table>
 
-            <div id="but"><input type="submit" value="Save Student" [disabled]="!regform.valid"></div>
+            <div id="but"><input type="submit" value="Save Student" ></div>
             <div> <br> </div>
 
     </form> 
