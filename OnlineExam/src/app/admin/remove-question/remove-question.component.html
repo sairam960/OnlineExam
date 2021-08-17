@@ -26,8 +26,9 @@
                         <button class="loginbtn" (click)="getQuestion()">Get Question</button>
                     </form>
                     
+                    
                     <h1>Search Results</h1>
-
+<div align="margin-left">
                     <table>
                         <tr>
                             <th>Question ID</th>
@@ -89,6 +90,7 @@
                             <td><button (click)="activateQuestion(detail.questionId)" *ngIf = "detail.questionId">Activate</button></td>
                         </tr>
                     </table>
+                </div>
                      
                 </form>
             </div>
