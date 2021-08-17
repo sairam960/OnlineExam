@@ -1,23 +1,35 @@
 package com.lti;
 
-import java.util.List;
+
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.lti.entity.Subject;
-import com.lti.repository.QuestionRepository;
+import com.lti.entity.User;
+import com.lti.service.UserService;
+
 
 @SpringBootTest
 class OnlineExamApplicationTests {
 
-	//@Test
+	@Test
 	public void testCase1() {
-		/*QuestionRepository q= new QuestionRepository();
-		//List<Subject> list=q.getSubjects();
-		//for(Subject s:list) {
-			System.out.println(s.getSubjectId()+","+s.getName());
-		}*/
+		
 	}
-
+	
+	@Autowired
+	UserService uservice;
+	
+	void testAddUser() {
+		 
+		User user = new User();
+		user.setUserId(201);
+		user.setName("Akshay Mishra");
+		user.setEmailId("akshay@gmail.com");
+		user.setPassword("Akshay@123");
+		
+	}
+	
+	
 }
