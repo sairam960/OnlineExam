@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: linear-gradient(to right, #b92b27, #1565c0)
 }
 
 .navbar {
@@ -27,9 +26,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    background: #191919;
+    background: #ffffff;
     text-align: center;
-    transition: 0.25s;
     margin-top: 100px
 }
 
@@ -39,20 +37,19 @@ body {
     position: absolute;
     top: 75%;
     left: 50%;
-    background: #191919;
+    background: #ffffff;
     text-align: center;
-    color: white;
-    transition: 0.25s;
+    color: rgb(0, 0, 0);
     margin-top: 600px
 }
 
 .box-result table {
-    color: #2ecc71;
-    border: 2px solid #3498db;
+    color: #000000;
+    border: 2px solid #000000;
 }
 
 .box-result td {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .box input[type="text"],
@@ -62,23 +59,14 @@ body {
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #3498db;
+    border: 2px solid #000000;
     padding: 10px 10px;
     width: 250px;
     outline: none;
     color: white;
-    border-radius: 24px;
-    transition: 0.25s
 }
 
-.box input[type="text"]:focus{
-    width: 300px;
-    border-color: #2ecc71
-}
-.box input[type="password"]:focus {
-    width: 300px;
-    border-color: #2ecc71
-}
+
 
 .box select{
     border: 0;
@@ -86,22 +74,20 @@ body {
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #3498db;
+    border: 2px solid #000000;
     padding: 10px 10px;
     width: 250px;
     outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s
+    color: rgb(0, 0, 0);
 }
 
 .box option {
-    background: #191919;
-    color: white;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
 .box h1 {
-    color: white;
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     font-weight: 500
 }
@@ -112,18 +98,14 @@ body {
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #2ecc71;
+    border: 2px solid #000000;
     padding: 14px 40px;
     outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
+    color: rgb(0, 0, 0);
     cursor: pointer
 }
 
-.box input[type="submit"]:hover {
-    background: #2ecc71;
-}
+
 
 .box hr {
     border: 1px solid white;
@@ -138,19 +120,10 @@ body {
     border: 2px solid #2ecc71;
     padding: 14px 40px;
     outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
+    color: rgb(0, 0, 0);
     cursor: pointer
 }
 
-.loginbtn:hover{
-    background: #2ecc71;
-}
-
-.piechart{
-    background-color: white;
-  }
 
 
 
